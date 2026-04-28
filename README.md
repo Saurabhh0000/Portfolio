@@ -23,11 +23,20 @@ This portfolio showcases my projects, skills, and experience.
 
 ---
 
-## 🛠️ Tech Stack
+## 🧠 Skills & Technologies
 
-- HTML
-- CSS
-- JavaScript
+I have hands-on experience with the following technologies:
+
+- Core Java
+- Collections and Framework
+- Spring Boot
+- Spring Security
+- Spring MVC
+- Spring Data JPA
+- RBAC (Role Based Access Control)
+- React JS
+- HTML, CSS, JavaScript
+- MySQL
 
 ---
 
