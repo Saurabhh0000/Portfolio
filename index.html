@@ -23,7 +23,7 @@
     <!-- NAV -->
     <nav id="nav">
       <a href="#home" class="nav-logo"
-        ><span class="mono">&lt;</span>SK<span class="mono">/&gt;</span></a
+        ><span class="mono">&lt;</span>Saurabh<span class="mono">/&gt;</span></a
       >
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -44,19 +44,18 @@
         </div>
         <h1 class="hero-title">
           <span class="line-wrap"
-            ><span class="reveal-line">I build things</span></span
+            ><span class="reveal-line">Building scalable</span></span
           >
           <span class="line-wrap"
-            ><span class="reveal-line">for the web</span></span
+            ><span class="reveal-line">Java applications</span></span
           >
           <span class="line-wrap amber"
-            ><span class="reveal-line">& beyond.</span></span
+            ><span class="reveal-line">for real users.</span></span
           >
         </h1>
         <p class="hero-sub reveal-fade">
           Saurabh Kumar — Full-Stack Developer crafting performant web
-          applications with Java, Spring Boot &amp; React. Based in Patna, Bihar
-          🇮🇳
+          applications with Java, Spring Boot &amp; React.
         </p>
         <div class="hero-actions reveal-fade">
           <a
@@ -102,19 +101,29 @@
           <div class="code-bar">
             <span class="dot r"></span><span class="dot y"></span
             ><span class="dot g"></span>
-            <span class="mono code-file">saurabh.json</span>
+            <span class="mono code-file">BookingController.java</span>
           </div>
-          <pre class="code-body"><span class="c-dim">// current status</span>
-<span class="c-key">const</span> developer = {
-  <span class="c-prop">name</span>:     <span class="c-str">"Saurabh Kumar"</span>,
-  <span class="c-prop">role</span>:     <span class="c-str">"Full-Stack Dev"</span>,
-  <span class="c-prop">location</span>: <span class="c-str">"Patna, Bihar"</span>,
-  <span class="c-prop">stack</span>: [
-    <span class="c-str">"Java"</span>, <span class="c-str">"Spring Boot"</span>,
-    <span class="c-str">"React"</span>, <span class="c-str">"MySQL"</span>
-  ],
-  <span class="c-prop">status</span>: <span class="c-amber">✅ "Open to work"</span>
-};</pre>
+          <pre
+            class="code-body"><span class="c-dim">// Fixly — Service Marketplace Platform</span>
+<span class="c-amber">@RestController</span>
+<span class="c-amber">@RequestMapping</span>(<span class="c-str">"/api/v1/bookings"</span>)
+<span class="c-key">public class</span> <span class="c-prop">BookingController</span> {
+
+    <span class="c-key">private final</span> BookingService bookingService;
+
+    <span class="c-key">public</span> <span class="c-prop">BookingController</span>(BookingService service) {
+        <span class="c-key">this</span>.bookingService = service;
+    }
+
+    <span class="c-amber">@PreAuthorize</span>(<span class="c-str">"hasRole('CUSTOMER')"</span>)
+    <span class="c-amber">@PostMapping</span>
+    <span class="c-key">public</span> ResponseEntity&lt;BookingResponse&gt; <span class="c-prop">createBooking</span>(
+            <span class="c-amber">@Valid</span> <span class="c-amber">@RequestBody</span> BookingRequest request) {
+
+        <span class="c-key">return</span> ResponseEntity.status(HttpStatus.CREATED)
+                .body(bookingService.bookProvider(request));
+    }
+}</pre>
         </div>
       </div>
       <div class="hero-scroll-hint">
@@ -641,8 +650,8 @@
     <!-- FOOTER -->
     <footer>
       <div class="footer-inner">
-        <div class="nav-logo mono">&lt;SK/&gt;</div>
-        <p>© 2025 Saurabh Kumar. Designed &amp; built with ❤️</p>
+        <div class="nav-logo mono">&lt;Saurabh/&gt;</div>
+        <p>© 2026 Saurabh Kumar. Designed &amp; built with ❤️</p>
         <div class="footer-links">
           <a href="https://github.com/Saurabhh0000" target="_blank">GitHub</a>
           <a
