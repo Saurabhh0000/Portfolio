@@ -3,167 +3,236 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saurabh Kumar — Full-Stack Developer</title>
+    <title>Saurabh Kumar — Java Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Saurabh Kumar — Java Full Stack Developer specializing in Spring Boot, REST APIs, and React. Available for full-time roles." />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet" />
+
+    <!-- Devicon for tech icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
+    <!-- Font Awesome for UI icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- PRELOADER -->
+    <!-- ═══════════════════════════════════════
+         PRELOADER
+    ═══════════════════════════════════════ -->
     <div id="preloader">
       <div class="pre-inner">
-        <span class="pre-mono">initializing</span>
+        <span class="mono pre-mono">saurabh.kumar</span>
         <div class="pre-bar"><div class="pre-fill"></div></div>
+        <span class="mono pre-sub">Java Full Stack Developer</span>
       </div>
     </div>
 
-    <!-- NAV -->
+    <!-- ═══════════════════════════════════════
+         NAV
+    ═══════════════════════════════════════ -->
     <nav id="nav">
-      <a href="#home" class="nav-logo"
-        ><span class="mono">&lt;</span>Saurabh<span class="mono">/&gt;</span></a
-      >
+      <a href="#home" class="nav-logo mono">&lt;SK /&gt;</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <a
+        href="https://saurabh-kumar-dev.netlify.app/Saurabh_Resume.pdf"
+        target="_blank"
+        class="nav-resume">
+        <i class="fa-solid fa-file-lines"></i> Resume
+      </a>
       <button class="nav-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </nav>
 
-    <!-- HERO -->
+    <!-- ═══════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════ -->
     <section id="home">
-      <div class="hero-inner">
-        <div class="hero-meta">
-          <span class="mono chip">// available for opportunities</span>
-        </div>
-        <h1 class="hero-title">
-          <span class="line-wrap"
-            ><span class="reveal-line">Building scalable</span></span
-          >
-          <span class="line-wrap"
-            ><span class="reveal-line">Java applications</span></span
-          >
-          <span class="line-wrap amber"
-            ><span class="reveal-line">for real users.</span></span
-          >
-        </h1>
-        <p class="hero-sub reveal-fade">
-          Saurabh Kumar — Full-Stack Developer crafting performant web
-          applications with Java, Spring Boot &amp; React.
-        </p>
-        <div class="hero-actions reveal-fade">
-          <a
-            href="https://saurabh-kumar-dev.netlify.app/Saurabh_Resume.pdf"
-            target="_blank"
-            class="btn-amber">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.2"
-              stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-            Download Resume
-          </a>
-          <a href="#contact" class="btn-ghost">Let's talk →</a>
-        </div>
-        <div class="hero-stats reveal-fade">
-          <div class="stat">
-            <span class="stat-n">5+</span>
-            <span class="stat-l">Projects Built</span>
+      <div class="hero-grid">
+        <div class="hero-inner">
+          <div class="hero-badges">
+            <span class="badge badge-green">
+              <span class="badge-dot"></span>
+              Open to Work
+            </span>
+            <span class="badge badge-amber mono">Java Full Stack</span>
           </div>
-          <div class="stat-div"></div>
-          <div class="stat">
-            <span class="stat-n">7.66</span>
-            <span class="stat-l">CGPA B.Tech</span>
-          </div>
-          <div class="stat-div"></div>
-          <div class="stat">
-            <span class="stat-n">2024</span>
-            <span class="stat-l">Graduate</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero-code reveal-fade">
-        <div class="code-card">
-          <div class="code-bar">
-            <span class="dot r"></span><span class="dot y"></span
-            ><span class="dot g"></span>
-            <span class="mono code-file">BookingController.java</span>
-          </div>
-          <pre
-            class="code-body"><span class="c-dim">// Fixly — Service Marketplace Platform</span>
-<span class="c-amber">@RestController</span>
-<span class="c-amber">@RequestMapping</span>(<span class="c-str">"/api/v1/bookings"</span>)
-<span class="c-key">public class</span> <span class="c-prop">BookingController</span> {
 
-    <span class="c-key">private final</span> BookingService bookingService;
+          <h1 class="hero-title">
+            <span class="line-wrap"
+              ><span class="reveal-line">Backend-first</span></span
+            >
+            <span class="line-wrap"
+              ><span class="reveal-line">developer who</span></span
+            >
+            <span class="line-wrap accent-line"
+              ><span class="reveal-line">ships full products.</span></span
+            >
+          </h1>
 
-    <span class="c-key">public</span> <span class="c-prop">BookingController</span>(BookingService service) {
-        <span class="c-key">this</span>.bookingService = service;
+          <p class="hero-sub reveal-fade">
+            I'm <strong>Saurabh Kumar</strong> — a Java Full Stack Developer
+            building secure, scalable applications with Spring Boot and React.
+            Infosys-trained. 5 shipped projects. Ready to contribute from day
+            one.
+          </p>
+
+          <div class="hero-actions reveal-fade">
+            <a
+              href="https://fixlyoffical.netlify.app/"
+              target="_blank"
+              class="btn-primary">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              View Fixly — Live Project
+            </a>
+            <a
+              href="https://saurabh-kumar-dev.netlify.app/Saurabh_Resume.pdf"
+              target="_blank"
+              class="btn-ghost">
+              <i class="fa-solid fa-download"></i>
+              Download Resume
+            </a>
+          </div>
+
+          <div class="hero-stats reveal-fade">
+            <div class="stat">
+              <span class="stat-n">5+</span>
+              <span class="stat-l">Projects Shipped</span>
+            </div>
+            <div class="stat-div"></div>
+            <div class="stat">
+              <span class="stat-n">1</span>
+              <span class="stat-l">Infosys Internship</span>
+            </div>
+            <div class="stat-div"></div>
+            <div class="stat">
+              <span class="stat-n">8+</span>
+              <span class="stat-l">Technologies</span>
+            </div>
+            <div class="stat-div"></div>
+            <div class="stat">
+              <span class="stat-n avail">✓</span>
+              <span class="stat-l">Immediately Available</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-code reveal-fade">
+          <div class="code-card">
+            <div class="code-bar">
+              <span class="dot r"></span>
+              <span class="dot y"></span>
+              <span class="dot g"></span>
+              <span class="mono code-file">
+                <i
+                  class="fa-brands fa-java"
+                  style="color: #f59e0b; margin-right: 0.3rem"></i>
+                BookingService.java — Fixly
+              </span>
+            </div>
+            <pre
+              class="code-body"><span class="c-dim">// Fixly: Core booking logic with role-based access</span>
+<span class="c-anno">@Service</span>
+<span class="c-anno">@Transactional</span>
+<span class="c-key">public class</span> <span class="c-type">BookingService</span> {
+
+    <span class="c-key">private final</span> <span class="c-type">BookingRepository</span> bookingRepo;
+    <span class="c-key">private final</span> <span class="c-type">OtpService</span>         otpService;
+    <span class="c-key">private final</span> <span class="c-type">NotificationService</span> notifier;
+
+    <span class="c-anno">@PreAuthorize</span>(<span class="c-str">"hasRole('CUSTOMER')"</span>)
+    <span class="c-key">public</span> <span class="c-type">BookingResponse</span> <span class="c-fn">createBooking</span>(
+            <span class="c-type">BookingRequest</span> req,
+            <span class="c-anno">@AuthenticationPrincipal</span> <span class="c-type">UserDetails</span> user) {
+
+        <span class="c-type">Booking</span> booking = <span class="c-type">Booking</span>.builder()
+            .customer(user.getUsername())
+            .providerId(req.getProviderId())
+            .scheduledAt(req.getScheduledAt())
+            .status(<span class="c-type">BookingStatus</span>.PENDING)
+            .build();
+
+        bookingRepo.save(booking);
+        otpService.<span class="c-fn">sendVerificationOtp</span>(booking);
+        notifier.<span class="c-fn">alertProvider</span>(booking.getProviderId());
+
+        <span class="c-key">return</span> <span class="c-type">BookingMapper</span>.<span class="c-fn">toResponse</span>(booking);
     }
 
-    <span class="c-amber">@PreAuthorize</span>(<span class="c-str">"hasRole('CUSTOMER')"</span>)
-    <span class="c-amber">@PostMapping</span>
-    <span class="c-key">public</span> ResponseEntity&lt;BookingResponse&gt; <span class="c-prop">createBooking</span>(
-            <span class="c-amber">@Valid</span> <span class="c-amber">@RequestBody</span> BookingRequest request) {
-
-        <span class="c-key">return</span> ResponseEntity.status(HttpStatus.CREATED)
-                .body(bookingService.bookProvider(request));
+    <span class="c-anno">@PreAuthorize</span>(<span class="c-str">"hasRole('PROVIDER')"</span>)
+    <span class="c-key">public void</span> <span class="c-fn">verifyJobOtp</span>(<span class="c-type">Long</span> bookingId, <span class="c-type">String</span> otp) {
+        otpService.<span class="c-fn">validate</span>(bookingId, otp);
+        bookingRepo.<span class="c-fn">updateStatus</span>(bookingId, <span class="c-type">BookingStatus</span>.IN_PROGRESS);
     }
 }</pre>
+          </div>
+          <div class="code-tag mono">
+            <i class="fa-solid fa-shield-halved"></i> JWT + RBAC + OTP
+            Verification
+          </div>
         </div>
       </div>
+
       <div class="hero-scroll-hint">
         <span class="mono">scroll</span>
         <div class="scroll-line"><div class="scroll-dot"></div></div>
       </div>
     </section>
 
-    <!-- TICKER -->
+    <!-- ═══════════════════════════════════════
+         TICKER
+    ═══════════════════════════════════════ -->
     <div class="ticker-wrap" aria-hidden="true">
       <div class="ticker-track">
         <span>Java</span><span class="sep">◆</span> <span>Spring Boot</span
+        ><span class="sep">◆</span> <span>Spring Security</span
         ><span class="sep">◆</span> <span>React JS</span
         ><span class="sep">◆</span> <span>MySQL</span><span class="sep">◆</span>
-        <span>REST APIs</span><span class="sep">◆</span>
-        <span>Spring Security</span><span class="sep">◆</span>
-        <span>Hibernate</span><span class="sep">◆</span> <span>JavaScript</span
-        ><span class="sep">◆</span> <span>HTML5 / CSS3</span
+        <span>Hibernate</span><span class="sep">◆</span> <span>REST APIs</span
+        ><span class="sep">◆</span> <span>JWT Auth</span
         ><span class="sep">◆</span> <span>RBAC</span><span class="sep">◆</span>
-        <span>JWT Auth</span><span class="sep">◆</span> <span>OOP</span
-        ><span class="sep">◆</span>
-        <!-- duplicate for seamless loop -->
-        <span>Java</span><span class="sep">◆</span> <span>Spring Boot</span
-        ><span class="sep">◆</span> <span>React JS</span
-        ><span class="sep">◆</span> <span>MySQL</span><span class="sep">◆</span>
-        <span>REST APIs</span><span class="sep">◆</span>
+        <span>Spring Data JPA</span><span class="sep">◆</span>
+        <span>JavaScript</span><span class="sep">◆</span> <span>OOP</span
+        ><span class="sep">◆</span> <span>Java</span><span class="sep">◆</span>
+        <span>Spring Boot</span><span class="sep">◆</span>
         <span>Spring Security</span><span class="sep">◆</span>
-        <span>Hibernate</span><span class="sep">◆</span> <span>JavaScript</span
-        ><span class="sep">◆</span> <span>HTML5 / CSS3</span
+        <span>React JS</span><span class="sep">◆</span> <span>MySQL</span
+        ><span class="sep">◆</span> <span>Hibernate</span
+        ><span class="sep">◆</span> <span>REST APIs</span
+        ><span class="sep">◆</span> <span>JWT Auth</span
         ><span class="sep">◆</span> <span>RBAC</span><span class="sep">◆</span>
-        <span>JWT Auth</span><span class="sep">◆</span> <span>OOP</span
+        <span>Spring Data JPA</span><span class="sep">◆</span>
+        <span>JavaScript</span><span class="sep">◆</span> <span>OOP</span
         ><span class="sep">◆</span>
       </div>
     </div>
 
-    <!-- ABOUT -->
+    <!-- ═══════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════ -->
     <section id="about">
       <div class="section-inner">
         <div class="about-grid">
-          <div class="about-img-col">
+          <div class="about-img-col reveal-left">
             <div class="about-img-wrap">
               <img
                 src="https://saurabh-kumar-dev.netlify.app/Image/IMG_0409.JPG"
@@ -172,25 +241,68 @@
               <div class="img-accent"></div>
             </div>
           </div>
-          <div class="about-content">
-            <span class="mono eyebrow">01 / About</span>
-            <h2>Passionate about<br />clean code &amp; great UX</h2>
+          <div class="about-content reveal-up">
+            <span class="eyebrow">About</span>
+            <h2>
+              I build backends that handle real users, not just demo traffic.
+            </h2>
             <p>
-              Hello! I'm Saurabh Kumar, a dedicated full-stack developer who
-              graduated from Chandigarh University in 2024. I love solving real
-              problems — whether that's architecting a backend service or
-              crafting a pixel-perfect frontend experience.
+              I'm a Java Full Stack Developer trained at Infosys Springboard,
+              with hands-on experience designing and shipping multi-role web
+              applications. My strongest work — Fixly, a service marketplace
+              with JWT authentication, OTP-verified job flows, and three
+              distinct user roles — runs live in production.
             </p>
             <p>
-              My passion lies in building systems that are both technically
-              sound and genuinely useful to people. I'm always learning, always
-              building.
+              My focus is backend engineering: building APIs that are secure by
+              default, data models that hold up under load, and business logic
+              that reflects real-world workflows. I use React on the frontend,
+              but I think about system architecture first.
             </p>
+            <p>
+              I graduated from Chandigarh University in 2024 with a B.Tech in
+              Computer Science. I'm based in Patna, Bihar, and open to full-time
+              roles across India — remote or on-site.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                  <strong>Security-aware development</strong>
+                  <span
+                    >JWT, Spring Security, role-based access control across all
+                    backend projects</span
+                  >
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-database"></i>
+                <div>
+                  <strong>Relational data modelling</strong>
+                  <span
+                    >MySQL schema design, Hibernate ORM, Spring Data JPA for
+                    production-grade persistence</span
+                  >
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-code-branch"></i>
+                <div>
+                  <strong>Full product ownership</strong>
+                  <span
+                    >Designed, built, and deployed Fixly end-to-end — from DB
+                    schema to live Netlify deployment</span
+                  >
+                </div>
+              </div>
+            </div>
+
             <div class="edu-timeline">
-              <div class="edu-item">
+              <div class="edu-item reveal-up">
                 <div class="edu-dot"></div>
                 <div class="edu-body">
-                  <span class="mono edu-year">2024</span>
+                  <span class="mono edu-year">2020 – 2024</span>
                   <strong>B.Tech — Computer Science &amp; Engineering</strong>
                   <span
                     >Chandigarh University, Gharuan &nbsp;·&nbsp; CGPA:
@@ -198,17 +310,17 @@
                   >
                 </div>
               </div>
-              <div class="edu-item">
+              <div class="edu-item reveal-up" style="transition-delay: 0.1s">
                 <div class="edu-dot"></div>
                 <div class="edu-body">
                   <span class="mono edu-year">2020</span>
-                  <strong>12th Grade</strong>
+                  <strong>12th Grade — Science</strong>
                   <span
                     >St. Karen's Secondary School, Bihar &nbsp;·&nbsp; 84%</span
                   >
                 </div>
               </div>
-              <div class="edu-item">
+              <div class="edu-item reveal-up" style="transition-delay: 0.2s">
                 <div class="edu-dot"></div>
                 <div class="edu-body">
                   <span class="mono edu-year">2018</span>
@@ -222,137 +334,504 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills">
+    <!-- ═══════════════════════════════════════
+         EXPERIENCE / INTERNSHIP
+    ═══════════════════════════════════════ -->
+    <section id="experience">
       <div class="section-inner">
-        <span class="mono eyebrow">02 / Skills</span>
-        <h2>Technologies I work with</h2>
+        <span class="eyebrow">Experience</span>
+        <h2>Where I've trained and built</h2>
         <p class="section-sub">
-          A snapshot of the tools and languages I use to bring ideas from
-          concept to production.
+          Hands-on internship at one of India's largest IT training platforms,
+          alongside independent project development.
         </p>
-        <div class="skills-grid">
-          <div class="sk-card">
-            <div class="sk-icon">☕</div>
-            <div class="sk-info">
-              <strong>Java</strong>
-              <p>OOP, collections, streams &amp; multithreading</p>
+
+        <div class="exp-layout">
+          <div class="exp-card featured-exp reveal-up">
+            <div class="exp-header">
+              <div class="exp-logo-wrap">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/2560px-Infosys_logo.svg.png"
+                  alt="Infosys"
+                  class="exp-logo" />
+              </div>
+              <div class="exp-meta">
+                <h3>Java Full Stack Development Intern</h3>
+                <span class="exp-company">Infosys Springboard</span>
+                <span class="mono exp-period">
+                  <i class="fa-regular fa-calendar"></i>
+                  2023 — 2024 &nbsp;·&nbsp; Remote
+                </span>
+              </div>
+              <span class="exp-badge">Internship</span>
             </div>
-            <div class="sk-bar-wrap">
-              <div class="sk-bar" style="--w: 90%"></div>
+            <ul class="exp-bullets">
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Completed structured curriculum covering Java OOP, Spring Boot
+                REST API development, Hibernate ORM, and Spring Security —
+                totalling 200+ hours of guided training.
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Built and submitted a production-grade service marketplace
+                (Fixly) as the capstone project, implementing RBAC, JWT
+                authentication, and OTP-verified job completion flow.
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Gained hands-on experience with full-stack architecture: Spring
+                Boot REST backend paired with a React JS frontend, connected to
+                a MySQL relational database.
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Developed a working understanding of secure API design — input
+                validation with <code>@Valid</code>, exception handling with
+                <code>@ControllerAdvice</code>, and stateless JWT session
+                management.
+              </li>
+            </ul>
+            <div class="exp-tags">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>Spring Security</span>
+              <span>Hibernate</span>
+              <span>React JS</span>
+              <span>MySQL</span>
+              <span>JWT</span>
+              <span>REST APIs</span>
             </div>
-            <span class="mono sk-pct">90%</span>
           </div>
-          <div class="sk-card">
-            <div class="sk-icon">🍃</div>
-            <div class="sk-info">
-              <strong>Spring Boot</strong>
-              <p>REST APIs, Security, Hibernate, microservices</p>
+
+          <div class="exp-card reveal-up" style="transition-delay: 0.1s">
+            <div class="exp-header">
+              <div class="exp-logo-wrap icon-only">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div class="exp-meta">
+                <h3>Independent Full Stack Developer</h3>
+                <span class="exp-company">Self-directed Projects</span>
+                <span class="mono exp-period">
+                  <i class="fa-regular fa-calendar"></i>
+                  2022 — Present
+                </span>
+              </div>
+              <span class="exp-badge">Projects</span>
             </div>
-            <div class="sk-bar-wrap">
-              <div class="sk-bar" style="--w: 85%"></div>
-            </div>
-            <span class="mono sk-pct">85%</span>
-          </div>
-          <div class="sk-card">
-            <div class="sk-icon">⚛️</div>
-            <div class="sk-info">
-              <strong>React JS</strong>
-              <p>Hooks, state management, SPA development</p>
-            </div>
-            <div class="sk-bar-wrap">
-              <div class="sk-bar" style="--w: 80%"></div>
-            </div>
-            <span class="mono sk-pct">80%</span>
-          </div>
-          <div class="sk-card">
-            <div class="sk-icon">🗄️</div>
-            <div class="sk-info">
-              <strong>MySQL</strong>
-              <p>Relational modelling, joins, stored procedures</p>
-            </div>
-            <div class="sk-bar-wrap">
-              <div class="sk-bar" style="--w: 82%"></div>
-            </div>
-            <span class="mono sk-pct">82%</span>
-          </div>
-          <div class="sk-card">
-            <div class="sk-icon">🌐</div>
-            <div class="sk-info">
-              <strong>HTML5 / CSS3</strong>
-              <p>Semantic markup, responsive layouts, animations</p>
-            </div>
-            <div class="sk-bar-wrap">
-              <div class="sk-bar" style="--w: 92%"></div>
-            </div>
-            <span class="mono sk-pct">92%</span>
-          </div>
-          <div class="sk-card">
-            <div class="sk-icon">⚡</div>
-            <div class="sk-info">
-              <strong>JavaScript</strong>
-              <p>ES6+, async/await, DOM APIs &amp; tooling</p>
-            </div>
-            <div class="sk-bar-wrap">
-              <div class="sk-bar" style="--w: 78%"></div>
-            </div>
-            <span class="mono sk-pct">78%</span>
+            <ul class="exp-bullets">
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Designed and deployed 5 full-stack applications, each solving a
+                distinct domain problem: service booking, hospital management,
+                employee tracking, student housing, and task management.
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Independently architected MySQL schemas, JPA entity models, and
+                RESTful API contracts for each project — no starter templates or
+                scaffolding tools.
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Deployed Fixly frontend live on Netlify with a working demo,
+                demonstrating end-to-end ownership from development to
+                production.
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- ═══════════════════════════════════════
+         SKILLS
+    ═══════════════════════════════════════ -->
+    <section id="skills">
+      <div class="section-inner">
+        <span class="eyebrow">Skills</span>
+        <h2>Technologies I work with</h2>
+        <p class="section-sub">
+          Grouped by role in the stack. Proficiency reflects real project usage,
+          not self-assessed scores.
+        </p>
+
+        <div class="skills-columns">
+          <!-- Backend -->
+          <div class="skill-group reveal-up">
+            <div class="skill-group-header">
+              <i class="fa-solid fa-server"></i>
+              <span>Backend</span>
+            </div>
+            <div class="skill-list">
+              <div class="skill-row">
+                <i class="devicon-java-plain colored"></i>
+                <div class="skill-info">
+                  <span class="skill-name">Java</span>
+                  <span class="skill-desc"
+                    >OOP, collections, streams, multithreading</span
+                  >
+                </div>
+                <span class="skill-level level-advanced">Advanced</span>
+              </div>
+              <div class="skill-row">
+                <i class="devicon-spring-plain colored"></i>
+                <div class="skill-info">
+                  <span class="skill-name">Spring Boot</span>
+                  <span class="skill-desc"
+                    >REST APIs, dependency injection, app config</span
+                  >
+                </div>
+                <span class="skill-level level-advanced">Advanced</span>
+              </div>
+              <div class="skill-row">
+                <i class="devicon-spring-plain" style="color: #6db33f"></i>
+                <div class="skill-info">
+                  <span class="skill-name">Spring Security</span>
+                  <span class="skill-desc"
+                    >JWT, RBAC, stateless session management</span
+                  >
+                </div>
+                <span class="skill-level level-proficient">Proficient</span>
+              </div>
+              <div class="skill-row">
+                <i class="devicon-hibernate-plain colored"></i>
+                <div class="skill-info">
+                  <span class="skill-name">Hibernate / JPA</span>
+                  <span class="skill-desc"
+                    >Entity modelling, relationships, transactions</span
+                  >
+                </div>
+                <span class="skill-level level-proficient">Proficient</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div class="skill-group reveal-up" style="transition-delay: 0.1s">
+            <div class="skill-group-header">
+              <i class="fa-solid fa-display"></i>
+              <span>Frontend</span>
+            </div>
+            <div class="skill-list">
+              <div class="skill-row">
+                <i class="devicon-react-original colored"></i>
+                <div class="skill-info">
+                  <span class="skill-name">React JS</span>
+                  <span class="skill-desc"
+                    >Hooks, state management, SPA routing</span
+                  >
+                </div>
+                <span class="skill-level level-proficient">Proficient</span>
+              </div>
+              <div class="skill-row">
+                <i class="devicon-javascript-plain colored"></i>
+                <div class="skill-info">
+                  <span class="skill-name">JavaScript</span>
+                  <span class="skill-desc">ES6+, async/await, DOM APIs</span>
+                </div>
+                <span class="skill-level level-proficient">Proficient</span>
+              </div>
+              <div class="skill-row">
+                <i class="devicon-html5-plain colored"></i>
+                <div class="skill-info">
+                  <span class="skill-name">HTML5 / CSS3</span>
+                  <span class="skill-desc"
+                    >Semantic markup, responsive layouts</span
+                  >
+                </div>
+                <span class="skill-level level-advanced">Advanced</span>
+              </div>
+              <div class="skill-row">
+                <i
+                  class="devicon-thymeleaf-original"
+                  style="color: #005f0f"></i>
+                <div class="skill-info">
+                  <span class="skill-name">Thymeleaf</span>
+                  <span class="skill-desc"
+                    >Server-side templating with Spring MVC</span
+                  >
+                </div>
+                <span class="skill-level level-intermediate">Intermediate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="skill-group reveal-up" style="transition-delay: 0.2s">
+            <div class="skill-group-header">
+              <i class="fa-solid fa-database"></i>
+              <span>Database</span>
+            </div>
+            <div class="skill-list">
+              <div class="skill-row">
+                <i class="devicon-mysql-plain colored"></i>
+                <div class="skill-info">
+                  <span class="skill-name">MySQL</span>
+                  <span class="skill-desc"
+                    >Schema design, joins, stored procedures</span
+                  >
+                </div>
+                <span class="skill-level level-proficient">Proficient</span>
+              </div>
+              <div class="skill-row">
+                <i class="fa-solid fa-table-list" style="color: #f59e0b"></i>
+                <div class="skill-info">
+                  <span class="skill-name">Spring Data JPA</span>
+                  <span class="skill-desc"
+                    >Repository pattern, custom queries, pagination</span
+                  >
+                </div>
+                <span class="skill-level level-proficient">Proficient</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-group reveal-up" style="transition-delay: 0.3s">
+            <div class="skill-group-header">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+              <span>Tools &amp; Platforms</span>
+            </div>
+            <div class="skill-list">
+              <div class="skill-row">
+                <i class="devicon-git-plain colored"></i>
+                <div class="skill-info">
+                  <span class="skill-name">Git &amp; GitHub</span>
+                  <span class="skill-desc"
+                    >Version control, branching, pull requests</span
+                  >
+                </div>
+                <span class="skill-level level-proficient">Proficient</span>
+              </div>
+              <div class="skill-row">
+                <i class="devicon-intellij-plain colored"></i>
+                <div class="skill-info">
+                  <span class="skill-name">IntelliJ IDEA</span>
+                  <span class="skill-desc"
+                    >Primary Java IDE for all backend development</span
+                  >
+                </div>
+                <span class="skill-level level-proficient">Proficient</span>
+              </div>
+              <div class="skill-row">
+                <i
+                  class="fa-solid fa-plug-circle-check"
+                  style="color: #85ea2d"></i>
+                <div class="skill-info">
+                  <span class="skill-name">Postman</span>
+                  <span class="skill-desc"
+                    >API testing, request collections, debugging</span
+                  >
+                </div>
+                <span class="skill-level level-proficient">Proficient</span>
+              </div>
+              <div class="skill-row">
+                <i class="devicon-netlify-plain colored"></i>
+                <div class="skill-info">
+                  <span class="skill-name">Netlify</span>
+                  <span class="skill-desc"
+                    >Frontend deployment and live demo hosting</span
+                  >
+                </div>
+                <span class="skill-level level-intermediate">Intermediate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-legend">
+          <span class="skill-level level-advanced">Advanced</span> — core stack
+          used across multiple projects &nbsp;&nbsp;
+          <span class="skill-level level-proficient">Proficient</span> — used in
+          production, comfortable independently &nbsp;&nbsp;
+          <span class="skill-level level-intermediate">Intermediate</span> —
+          working knowledge, actively improving
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         PROJECTS
+    ═══════════════════════════════════════ -->
     <section id="projects">
       <div class="section-inner">
-        <span class="mono eyebrow">03 / Projects</span>
-        <h2>Featured Work</h2>
+        <span class="eyebrow">Projects</span>
+        <h2>Built and shipped</h2>
         <p class="section-sub">
-          Real-world applications spanning service marketplaces, healthcare, and
-          productivity tools.
+          Five full-stack applications covering service marketplaces,
+          healthcare, enterprise tools, and productivity. Each demonstrates a
+          different slice of backend engineering.
         </p>
-        <div class="projects-grid">
-          <article class="proj-card featured">
-            <div class="proj-img-wrap">
-              <img
-                src="https://saurabh-kumar-dev.netlify.app/Image/fixly.png"
-                alt="Fixly Platform"
-                loading="lazy" />
-              <div class="proj-overlay"></div>
-              <span class="proj-badge">Featured</span>
+
+        <!-- FLAGSHIP: Fixly -->
+        <article class="proj-featured reveal-up">
+          <div class="proj-featured-img">
+            <img
+              src="https://saurabh-kumar-dev.netlify.app/Image/fixly.png"
+              alt="Fixly — Service Marketplace Platform"
+              loading="lazy" />
+            <div class="proj-overlay"></div>
+            <div class="proj-live-badge">
+              <span class="live-dot"></span>
+              Live in Production
             </div>
-            <div class="proj-body">
-              <div class="proj-tags">
-                <span>Spring Boot</span><span>React JS</span
-                ><span>Spring Security</span><span>RBAC</span><span>MySQL</span>
-              </div>
-              <h3>Fixly Platform</h3>
-              <p>
-                A role-based service marketplace where users book local
-                services, providers manage requests, and admins oversee
-                categories. Features OTP-based job verification, ratings, and a
-                self-onboarding flow for providers.
-              </p>
+          </div>
+          <div class="proj-featured-body">
+            <div class="proj-tags">
+              <span>Spring Boot</span>
+              <span>Spring Security</span>
+              <span>JWT</span>
+              <span>RBAC</span>
+              <span>Hibernate</span>
+              <span>MySQL</span>
+              <span>React JS</span>
+            </div>
+            <h3>Fixly — Service Marketplace Platform</h3>
+            <p class="proj-caption">
+              A role-based marketplace connecting customers with local service
+              providers. Built end-to-end from schema design to live deployment,
+              with security and workflow correctness as primary constraints.
+            </p>
+            <ul class="proj-feature-list">
+              <li>
+                <i class="fa-solid fa-shield-halved"></i> Three-tier RBAC:
+                Customer, Provider, and Admin roles with distinct permission
+                sets enforced via Spring Security and <code>@PreAuthorize</code>
+              </li>
+              <li>
+                <i class="fa-solid fa-key"></i> Stateless JWT authentication
+                with token refresh — no session storage on the server
+              </li>
+              <li>
+                <i class="fa-solid fa-mobile-screen-button"></i> OTP-verified
+                job completion: provider and customer both confirm service
+                delivery before status updates
+              </li>
+              <li>
+                <i class="fa-solid fa-star"></i> Post-job rating and review
+                system tied to verified booking records, preventing spam reviews
+              </li>
+              <li>
+                <i class="fa-solid fa-store"></i> Provider self-onboarding with
+                admin approval gate before any bookings are accepted
+              </li>
+              <li>
+                <i class="fa-solid fa-layer-group"></i> React JS SPA frontend
+                consuming a fully RESTful Spring Boot API
+              </li>
+            </ul>
+            <div class="proj-actions">
               <a
                 href="https://fixlyoffical.netlify.app/"
                 target="_blank"
-                class="proj-link">
+                class="btn-primary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 View Live Demo
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5">
-                  <line x1="7" y1="17" x2="17" y2="7" />
-                  <polyline points="7 7 17 7 17 17" />
-                </svg>
+              </a>
+              <a
+                href="https://github.com/Saurabhh0000/"
+                target="_blank"
+                class="btn-ghost">
+                <i class="fa-brands fa-github"></i>
+                Source Code
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Other Projects Grid -->
+        <div class="projects-grid">
+          <article class="proj-card reveal-up">
+            <div class="proj-img-wrap">
+              <img
+                src="https://saurabh-kumar-dev.netlify.app/Image/careandcure.png"
+                alt="Care & Cure"
+                loading="lazy" />
+              <div class="proj-overlay"></div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-tags">
+                <span>Spring Boot</span><span>Thymeleaf</span
+                ><span>Hibernate</span><span>MySQL</span>
+              </div>
+              <h3>Care &amp; Cure — Hospital Management</h3>
+              <p>
+                Hospital platform handling appointment scheduling, patient
+                medical records, test report uploads, and online consultation
+                booking with digital prescription issuance. Demonstrates complex
+                entity relationships: Patient ↔ Doctor ↔ Appointment ↔
+                Prescription.
+              </p>
+              <div class="proj-highlights">
+                <span
+                  ><i class="fa-solid fa-check-circle"></i> Multi-role: Patient,
+                  Doctor, Admin</span
+                >
+                <span
+                  ><i class="fa-solid fa-check-circle"></i> Digital prescription
+                  workflow</span
+                >
+                <span
+                  ><i class="fa-solid fa-check-circle"></i> Test report
+                  management</span
+                >
+              </div>
+              <a
+                href="https://github.com/Saurabhh0000/CareAndCureHospitalManagementApp"
+                target="_blank"
+                class="proj-link">
+                <i class="fa-brands fa-github"></i> View on GitHub
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </article>
 
-          <article class="proj-card">
+          <article class="proj-card reveal-up" style="transition-delay: 0.08s">
+            <div class="proj-img-wrap">
+              <img
+                src="https://saurabh-kumar-dev.netlify.app/Image/EMS.png"
+                alt="Employee Management System"
+                loading="lazy" />
+              <div class="proj-overlay"></div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-tags">
+                <span>Spring Boot</span><span>React JS</span><span>JWT</span
+                ><span>Hibernate</span><span>MySQL</span>
+              </div>
+              <h3>Employee Management System</h3>
+              <p>
+                Full-stack admin dashboard for HR operations: employee CRUD,
+                department management, project assignment, and role-based access
+                control. JWT-authenticated React frontend connected to a Spring
+                Boot REST API with Hibernate persistence.
+              </p>
+              <div class="proj-highlights">
+                <span
+                  ><i class="fa-solid fa-check-circle"></i> JWT + RBAC
+                  enforced</span
+                >
+                <span
+                  ><i class="fa-solid fa-check-circle"></i> Full CRUD
+                  operations</span
+                >
+                <span
+                  ><i class="fa-solid fa-check-circle"></i> React SPA + REST
+                  API</span
+                >
+              </div>
+              <a
+                href="https://github.com/Saurabhh0000/"
+                target="_blank"
+                class="proj-link">
+                <i class="fa-brands fa-github"></i> View on GitHub
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="proj-card reveal-up" style="transition-delay: 0.16s">
             <div class="proj-img-wrap">
               <img
                 src="https://saurabh-kumar-dev.netlify.app/Image/PGLife.jpg"
@@ -365,108 +844,37 @@
                 <span>HTML</span><span>CSS</span><span>JavaScript</span
                 ><span>PHP</span><span>MySQL</span>
               </div>
-              <h3>PG Life</h3>
+              <h3>PG Life — Student Housing Platform</h3>
               <p>
-                Student housing platform for finding PG accommodations across
-                India. Location-based search, photo browsing, reviews &amp;
-                online booking.
+                Location-based platform for discovering PG accommodations across
+                Indian cities. City-filtered search, photo galleries, user
+                reviews, and online booking — backed by a PHP/MySQL relational
+                backend with normalized listings data.
               </p>
+              <div class="proj-highlights">
+                <span
+                  ><i class="fa-solid fa-check-circle"></i> City-based search
+                  filter</span
+                >
+                <span
+                  ><i class="fa-solid fa-check-circle"></i> Review system</span
+                >
+                <span
+                  ><i class="fa-solid fa-check-circle"></i> MySQL relational
+                  backend</span
+                >
+              </div>
               <a
                 href="https://github.com/Saurabhh0000/"
                 target="_blank"
                 class="proj-link">
-                View on GitHub
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5">
-                  <line x1="7" y1="17" x2="17" y2="7" />
-                  <polyline points="7 7 17 7 17 17" />
-                </svg>
+                <i class="fa-brands fa-github"></i> View on GitHub
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </article>
 
-          <article class="proj-card">
-            <div class="proj-img-wrap">
-              <img
-                src="https://saurabh-kumar-dev.netlify.app/Image/careandcure.png"
-                alt="Care And Cure"
-                loading="lazy" />
-              <div class="proj-overlay"></div>
-            </div>
-            <div class="proj-body">
-              <div class="proj-tags">
-                <span>Spring Boot</span><span>Thymeleaf</span><span>Java</span
-                ><span>MySQL</span>
-              </div>
-              <h3>Care &amp; Cure Hospital App</h3>
-              <p>
-                Healthcare platform for appointment booking, medical records,
-                test reports, and online consultations with digital
-                prescriptions.
-              </p>
-              <a
-                href="https://github.com/Saurabhh0000/CareAndCureHospitalManagementApp"
-                target="_blank"
-                class="proj-link">
-                View on GitHub
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5">
-                  <line x1="7" y1="17" x2="17" y2="7" />
-                  <polyline points="7 7 17 7 17 17" />
-                </svg>
-              </a>
-            </div>
-          </article>
-
-          <article class="proj-card">
-            <div class="proj-img-wrap">
-              <img
-                src="https://saurabh-kumar-dev.netlify.app/Image/EMS.png"
-                alt="Employee Management System"
-                loading="lazy" />
-              <div class="proj-overlay"></div>
-            </div>
-            <div class="proj-body">
-              <div class="proj-tags">
-                <span>Spring Boot</span><span>Hibernate</span><span>React</span
-                ><span>MySQL</span>
-              </div>
-              <h3>Employee Management System</h3>
-              <p>
-                Full-stack admin dashboard for employee CRUD, project
-                assignment, role-based access control, and JWT-based
-                authentication.
-              </p>
-              <a
-                href="https://github.com/Saurabhh0000/"
-                target="_blank"
-                class="proj-link">
-                View on GitHub
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5">
-                  <line x1="7" y1="17" x2="17" y2="7" />
-                  <polyline points="7 7 17 7 17 17" />
-                </svg>
-              </a>
-            </div>
-          </article>
-
-          <article class="proj-card">
+          <article class="proj-card reveal-up" style="transition-delay: 0.24s">
             <div class="proj-img-wrap">
               <img
                 src="https://saurabh-kumar-dev.netlify.app/Image/TodoApp.png"
@@ -479,27 +887,32 @@
                 <span>Spring Boot</span><span>Thymeleaf</span
                 ><span>Hibernate</span><span>MySQL</span>
               </div>
-              <h3>Todo App</h3>
+              <h3>Todo App — Spring MVC + Thymeleaf</h3>
               <p>
-                Responsive task manager with create, update, mark-complete, and
-                delete functionality. Clean, fast, and reliable for everyday
-                productivity.
+                Task management app demonstrating the full Spring MVC request
+                lifecycle: controller routing, Thymeleaf server-side rendering,
+                Hibernate persistence, and MySQL storage — a clean
+                implementation of the core Spring patterns.
               </p>
+              <div class="proj-highlights">
+                <span
+                  ><i class="fa-solid fa-check-circle"></i> Full Spring MVC
+                  flow</span
+                >
+                <span
+                  ><i class="fa-solid fa-check-circle"></i> Thymeleaf SSR</span
+                >
+                <span
+                  ><i class="fa-solid fa-check-circle"></i> Create / Update /
+                  Delete</span
+                >
+              </div>
               <a
                 href="https://github.com/Saurabhh0000/"
                 target="_blank"
                 class="proj-link">
-                View on GitHub
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5">
-                  <line x1="7" y1="17" x2="17" y2="7" />
-                  <polyline points="7 7 17 7 17 17" />
-                </svg>
+                <i class="fa-brands fa-github"></i> View on GitHub
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </article>
@@ -507,67 +920,188 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- ═══════════════════════════════════════
+         CERTIFICATIONS
+    ═══════════════════════════════════════ -->
+    <section id="certifications">
+      <div class="section-inner">
+        <span class="eyebrow">Certifications</span>
+        <h2>Verified training</h2>
+        <p class="section-sub">
+          Industry-recognized programs and structured courses completed
+          alongside project development.
+        </p>
+
+        <div class="certs-grid">
+          <div class="cert-card primary-cert reveal-up">
+            <div class="cert-icon-wrap">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/2560px-Infosys_logo.svg.png"
+                alt="Infosys"
+                class="cert-org-logo" />
+            </div>
+            <div class="cert-body">
+              <span class="cert-tag">Internship Certificate</span>
+              <h4>Java Full Stack Development</h4>
+              <p>Infosys Springboard</p>
+              <span class="mono cert-year">2023 – 2024</span>
+            </div>
+            <i class="fa-solid fa-certificate cert-mark"></i>
+          </div>
+
+          <div class="cert-card reveal-up" style="transition-delay: 0.08s">
+            <div class="cert-icon-wrap icon-only">
+              <i class="devicon-java-plain colored" style="font-size: 2rem"></i>
+            </div>
+            <div class="cert-body">
+              <span class="cert-tag">Course Completion</span>
+              <h4>Core Java &amp; OOP Principles</h4>
+              <p>Infosys Springboard</p>
+              <span class="mono cert-year">2023</span>
+            </div>
+            <i class="fa-solid fa-circle-check cert-mark"></i>
+          </div>
+
+          <div class="cert-card reveal-up" style="transition-delay: 0.16s">
+            <div class="cert-icon-wrap icon-only">
+              <i
+                class="devicon-spring-plain colored"
+                style="font-size: 2rem"></i>
+            </div>
+            <div class="cert-body">
+              <span class="cert-tag">Course Completion</span>
+              <h4>Spring Boot &amp; REST API Development</h4>
+              <p>Infosys Springboard</p>
+              <span class="mono cert-year">2023</span>
+            </div>
+            <i class="fa-solid fa-circle-check cert-mark"></i>
+          </div>
+
+          <div class="cert-card reveal-up" style="transition-delay: 0.24s">
+            <div class="cert-icon-wrap icon-only">
+              <i
+                class="devicon-react-original colored"
+                style="font-size: 2rem"></i>
+            </div>
+            <div class="cert-body">
+              <span class="cert-tag">Course Completion</span>
+              <h4>React JS Fundamentals</h4>
+              <p>Infosys Springboard</p>
+              <span class="mono cert-year">2024</span>
+            </div>
+            <i class="fa-solid fa-circle-check cert-mark"></i>
+          </div>
+
+          <div class="cert-card reveal-up" style="transition-delay: 0.32s">
+            <div class="cert-icon-wrap icon-only">
+              <i
+                class="devicon-mysql-plain colored"
+                style="font-size: 2rem"></i>
+            </div>
+            <div class="cert-body">
+              <span class="cert-tag">Course Completion</span>
+              <h4>Database Design with MySQL</h4>
+              <p>Infosys Springboard</p>
+              <span class="mono cert-year">2023</span>
+            </div>
+            <i class="fa-solid fa-circle-check cert-mark"></i>
+          </div>
+
+          <div
+            class="cert-card cert-placeholder reveal-up"
+            style="transition-delay: 0.4s">
+            <div class="cert-icon-wrap icon-only">
+              <i
+                class="fa-solid fa-plus"
+                style="color: var(--muted); font-size: 1.5rem"></i>
+            </div>
+            <div class="cert-body">
+              <span class="cert-tag">Coming Soon</span>
+              <h4>Add your next certification here</h4>
+              <p>Oracle, AWS, or Spring Professional</p>
+              <span class="mono cert-year">2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════ -->
     <section id="contact">
       <div class="section-inner">
-        <span class="mono eyebrow">04 / Contact</span>
-        <h2>Let's work together</h2>
+        <span class="eyebrow">Contact</span>
+        <h2>Ready to hire a Java developer?</h2>
         <p class="section-sub">
-          Open to full-time roles, freelance projects, and interesting
-          collaborations.
+          I'm actively looking for full-time roles as a Java Full Stack or
+          Spring Boot Developer. If you have an open position or want to see
+          more of my work — let's talk.
         </p>
+
         <div class="contact-grid">
           <div class="contact-cards">
-            <a href="tel:+916203298231" class="contact-card">
-              <div class="cc-icon">📞</div>
-              <div class="cc-body">
-                <span class="cc-label mono">Phone</span>
-                <span class="cc-val">+91 6203298231</span>
+            <a
+              href="mailto:saurabhkeshri074@gmail.com"
+              class="contact-card reveal-up">
+              <div class="cc-icon">
+                <i class="fa-solid fa-envelope"></i>
               </div>
-              <svg
-                class="cc-arrow"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5">
-                <line x1="7" y1="17" x2="17" y2="7" />
-                <polyline points="7 7 17 7 17 17" />
-              </svg>
-            </a>
-            <a href="mailto:saurabhkeshri074@gmail.com" class="contact-card">
-              <div class="cc-icon">✉️</div>
               <div class="cc-body">
                 <span class="cc-label mono">Email</span>
                 <span class="cc-val">saurabhkeshri074@gmail.com</span>
               </div>
-              <svg
-                class="cc-arrow"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5">
-                <line x1="7" y1="17" x2="17" y2="7" />
-                <polyline points="7 7 17 7 17 17" />
-              </svg>
+              <i class="fa-solid fa-arrow-up-right cc-arrow"></i>
             </a>
-            <div class="contact-card no-link">
-              <div class="cc-icon">📍</div>
+            <a
+              href="tel:+916203298231"
+              class="contact-card reveal-up"
+              style="transition-delay: 0.07s">
+              <div class="cc-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="cc-body">
+                <span class="cc-label mono">Phone</span>
+                <span class="cc-val">+91 6203 298 231</span>
+              </div>
+              <i class="fa-solid fa-arrow-up-right cc-arrow"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/saurabh-kumar-fronted-developer/"
+              target="_blank"
+              class="contact-card reveal-up"
+              style="transition-delay: 0.14s">
+              <div class="cc-icon">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+              <div class="cc-body">
+                <span class="cc-label mono">LinkedIn</span>
+                <span class="cc-val">saurabh-kumar-fronted-developer</span>
+              </div>
+              <i class="fa-solid fa-arrow-up-right cc-arrow"></i>
+            </a>
+            <div
+              class="contact-card no-link reveal-up"
+              style="transition-delay: 0.21s">
+              <div class="cc-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
               <div class="cc-body">
                 <span class="cc-label mono">Location</span>
-                <span class="cc-val">Patna, Bihar, India</span>
+                <span class="cc-val"
+                  >Patna, Bihar — Open to remote &amp; relocation</span
+                >
               </div>
             </div>
           </div>
-          <div class="contact-cta">
-            <p class="cta-headline">Ready to build something great?</p>
+
+          <div class="contact-cta reveal-up" style="transition-delay: 0.1s">
+            <p class="cta-headline">Interviewing for Java roles?</p>
             <p class="cta-body">
-              Whether you have a project in mind, a job opportunity, or just
-              want to say hi — reach out through any channel and I'll get back
-              to you promptly.
+              I'm available to start immediately. I have a live project (Fixly)
+              you can test right now, a resume ready to share, and I'm open to
+              technical assessments. The fastest way to reach me is email or
+              LinkedIn.
             </p>
             <div class="social-row">
               <a
@@ -575,98 +1109,88 @@
                 href="https://github.com/Saurabhh0000"
                 target="_blank"
                 title="GitHub">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="currentColor">
-                  <path
-                    d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
-                </svg>
+                <i class="fa-brands fa-github"></i>
               </a>
               <a
                 class="soc-btn"
                 href="https://www.linkedin.com/in/saurabh-kumar-fronted-developer/"
                 target="_blank"
                 title="LinkedIn">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="currentColor">
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                </svg>
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                class="soc-btn"
+                href="https://wa.me/916203298231"
+                target="_blank"
+                title="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
               </a>
               <a
                 class="soc-btn"
                 href="https://x.com/Saurabh75660541"
                 target="_blank"
                 title="X / Twitter">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="currentColor">
-                  <path
-                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-              <a
-                class="soc-btn whatsapp"
-                href="https://wa.me/916203298231"
-                target="_blank"
-                title="WhatsApp">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="currentColor">
-                  <path
-                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
-                </svg>
+                <i class="fa-brands fa-x-twitter"></i>
               </a>
             </div>
             <a
               href="mailto:saurabhkeshri074@gmail.com"
-              class="btn-amber"
-              style="
-                margin-top: 2rem;
-                display: inline-flex;
-                align-items: center;
-                gap: 0.5rem;
-              ">
-              Send an Email →
+              class="btn-primary"
+              style="margin-top: 2rem">
+              <i class="fa-solid fa-paper-plane"></i>
+              Send Me an Email
+            </a>
+            <a
+              href="https://saurabh-kumar-dev.netlify.app/Saurabh_Resume.pdf"
+              target="_blank"
+              class="btn-ghost"
+              style="margin-top: 0.75rem">
+              <i class="fa-solid fa-file-lines"></i>
+              Download Resume
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- ═══════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════ -->
     <footer>
       <div class="footer-inner">
-        <div class="nav-logo mono">&lt;Saurabh/&gt;</div>
-        <p>© 2026 Saurabh Kumar. Designed &amp; built with ❤️</p>
+        <div class="footer-left">
+          <a href="#home" class="nav-logo mono">&lt;SK /&gt;</a>
+          <p class="footer-tagline">
+            Java Full Stack Developer · Available for hire
+          </p>
+        </div>
+        <p class="footer-copy">
+          © 2026 Saurabh Kumar · Built with Java thinking, not just a template.
+        </p>
         <div class="footer-links">
-          <a href="https://github.com/Saurabhh0000" target="_blank">GitHub</a>
+          <a href="https://github.com/Saurabhh0000" target="_blank">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
           <a
             href="https://www.linkedin.com/in/saurabh-kumar-fronted-developer/"
-            target="_blank"
-            >LinkedIn</a
-          >
-          <a href="mailto:saurabhkeshri074@gmail.com">Email</a>
+            target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+          </a>
+          <a href="mailto:saurabhkeshri074@gmail.com">
+            <i class="fa-solid fa-envelope"></i> Email
+          </a>
         </div>
       </div>
     </footer>
 
     <!-- BACK TO TOP -->
-    <a href="#home" class="back-top" title="Back to top">↑</a>
+    <a href="#home" class="back-top" title="Back to top">
+      <i class="fa-solid fa-chevron-up"></i>
+    </a>
 
+    <!-- ═══════════════════════════════════════
+         SCRIPTS
+    ═══════════════════════════════════════ -->
     <script>
       // Preloader
       window.addEventListener("load", () => {
@@ -678,13 +1202,13 @@
         }, 1200);
       });
 
-      // Nav scroll effect
+      // Nav scroll
       const nav = document.getElementById("nav");
       window.addEventListener("scroll", () => {
         nav.classList.toggle("scrolled", window.scrollY > 40);
       });
 
-      // Mobile nav toggle
+      // Mobile nav
       const toggle = document.querySelector(".nav-toggle");
       const navLinks = document.querySelector(".nav-links");
       toggle.addEventListener("click", () => {
@@ -708,19 +1232,20 @@
             }
           });
         },
-        { threshold: 0.12 },
+        { threshold: 0.1 },
       );
+
       document
         .querySelectorAll(
-          ".sk-card, .proj-card, .contact-card, .edu-item, .about-img-wrap, .about-content, .cta-headline, .cta-body, .social-row, .btn-amber",
+          ".reveal-up, .reveal-left, .sk-card, .proj-card, .contact-card, .edu-item, .cert-card, .exp-card",
         )
         .forEach((el) => io.observe(el));
 
-      // Back to top visibility
+      // Back to top
       const btt = document.querySelector(".back-top");
       window.addEventListener("scroll", () => {
-        btt.style.opacity = window.scrollY > 300 ? "1" : "0";
-        btt.style.pointerEvents = window.scrollY > 300 ? "auto" : "none";
+        btt.style.opacity = window.scrollY > 400 ? "1" : "0";
+        btt.style.pointerEvents = window.scrollY > 400 ? "auto" : "none";
       });
     </script>
   </body>
