@@ -1,390 +1,1358 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saurabh Kumar — Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saurabh | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+      :root {
+        --bg: #070c18;
+        --bg2: #0d1428;
+        --card: #111827;
+        --border: #1e2d4a;
+        --indigo: #6366f1;
+        --indigo-lt: #818cf8;
+        --cyan: #22d3ee;
+        --white: #f8fafc;
+        --slate: #94a3b8;
+        --slate-dim: #475569;
+        --font-d: "Space Grotesk", sans-serif;
+        --font-b: "Inter", sans-serif;
+        --font-m: "JetBrains Mono", monospace;
+      }
 
-  <link rel="icon" type="image/png" href="favicon-16x16.png">
+      html {
+        scroll-behavior: smooth;
+      }
 
-</head>
+      body {
+        background: var(--bg);
+        color: var(--white);
+        font-family: var(--font-b);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
 
-<body>
+      /* ── NAV ── */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 5%;
+        background: rgba(7, 12, 24, 0.7);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-logo {
+        font-family: var(--font-m);
+        font-size: 1rem;
+        color: var(--indigo-lt);
+        letter-spacing: 0.05em;
+      }
+      .nav-logo span {
+        color: var(--cyan);
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+      .nav-links a {
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--slate);
+        transition: color 0.2s;
+        letter-spacing: 0.04em;
+      }
+      .nav-links a:hover {
+        color: var(--white);
+      }
+      .nav-cta {
+        padding: 0.5rem 1.25rem;
+        background: var(--indigo);
+        color: #fff !important;
+        border-radius: 6px;
+      }
+      .nav-cta:hover {
+        background: var(--indigo-lt) !important;
+        color: #fff !important;
+      }
 
-  <div id="preloader">
-    <div class="loader-dots">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
+      /* ── HERO ── */
+      #home {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 7rem 5% 4rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 4rem;
+        max-width: 1200px;
+        margin: auto;
+        width: 100%;
+      }
+      .hero-eyebrow {
+        font-family: var(--font-m);
+        font-size: 0.8rem;
+        color: var(--cyan);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .hero-eyebrow::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 1px;
+        background: var(--cyan);
+      }
+      h1 {
+        font-family: var(--font-d);
+        font-size: clamp(2.5rem, 5vw, 4.25rem);
+        font-weight: 700;
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        margin-bottom: 1rem;
+      }
+      .hero-subtitle {
+        font-size: 1.1rem;
+        color: var(--slate);
+        max-width: 440px;
+        margin-bottom: 2.5rem;
+        line-height: 1.75;
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, var(--indigo-lt), var(--cyan));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .btn-group {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.75rem;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s;
+        cursor: pointer;
+        border: none;
+      }
+      .btn-primary {
+        background: var(--indigo);
+        color: #fff;
+        box-shadow: 0 0 24px rgba(99, 102, 241, 0.35);
+      }
+      .btn-primary:hover {
+        background: var(--indigo-lt);
+        box-shadow: 0 0 36px rgba(99, 102, 241, 0.5);
+        transform: translateY(-1px);
+      }
+      .btn-outline {
+        background: transparent;
+        color: var(--white);
+        border: 1px solid var(--border);
+      }
+      .btn-outline:hover {
+        border-color: var(--indigo);
+        color: var(--indigo-lt);
+        transform: translateY(-1px);
+      }
 
+      /* Terminal card */
+      .terminal {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        overflow: hidden;
+        font-family: var(--font-m);
+        font-size: 0.82rem;
+        line-height: 1.9;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+      }
+      .terminal-bar {
+        padding: 0.75rem 1rem;
+        background: #0a0f1e;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+      .dot-r {
+        background: #ff5f57;
+      }
+      .dot-y {
+        background: #febc2e;
+      }
+      .dot-g {
+        background: #28c840;
+      }
+      .terminal-body {
+        padding: 1.5rem;
+      }
+      .t-comment {
+        color: var(--slate-dim);
+      }
+      .t-key {
+        color: var(--indigo-lt);
+      }
+      .t-val {
+        color: var(--cyan);
+      }
+      .t-str {
+        color: #a5f3fc;
+      }
+      .t-arr {
+        color: #fde68a;
+      }
+      .cursor {
+        display: inline-block;
+        width: 8px;
+        height: 1em;
+        background: var(--cyan);
+        vertical-align: middle;
+        animation: blink 1s step-end infinite;
+      }
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
 
+      /* Glow blobs */
+      .blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(90px);
+        pointer-events: none;
+        opacity: 0.18;
+      }
+      .blob-1 {
+        width: 500px;
+        height: 500px;
+        background: var(--indigo);
+        top: -100px;
+        right: -100px;
+      }
+      .blob-2 {
+        width: 320px;
+        height: 320px;
+        background: var(--cyan);
+        bottom: 0;
+        left: -80px;
+      }
 
-  <!-- Header Start Here -->
-  <header>
-    <a href="#home" class="logo">Portfolio</a>
+      /* ── SECTION SHARED ── */
+      section {
+        padding: 6rem 5%;
+      }
+      .section-inner {
+        max-width: 1200px;
+        margin: auto;
+      }
+      .section-label {
+        font-family: var(--font-m);
+        font-size: 0.75rem;
+        color: var(--cyan);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 0.6rem;
+      }
+      h2 {
+        font-family: var(--font-d);
+        font-size: clamp(2rem, 3.5vw, 2.75rem);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 1rem;
+      }
+      .section-desc {
+        color: var(--slate);
+        max-width: 560px;
+        margin-bottom: 3.5rem;
+        font-size: 1rem;
+      }
+
+      /* ── ABOUT ── */
+      #about {
+        background: var(--bg2);
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.4fr;
+        gap: 5rem;
+        align-items: start;
+      }
+      .avatar-wrap {
+        position: relative;
+      }
+      .avatar-img {
+        width: 100%;
+        max-width: 320px;
+        border-radius: 16px;
+        border: 2px solid var(--border);
+        display: block;
+        object-fit: cover;
+        aspect-ratio: 3/4;
+      }
+      .avatar-badge {
+        position: absolute;
+        bottom: 20px;
+        right: -20px;
+        background: var(--indigo);
+        border-radius: 10px;
+        padding: 0.7rem 1rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #fff;
+        box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+      }
+      .about-text p {
+        color: var(--slate);
+        margin-bottom: 1.25rem;
+        line-height: 1.8;
+      }
+      .edu-list {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .edu-item {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        padding: 1rem 1.25rem;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+      }
+      .edu-year {
+        font-family: var(--font-m);
+        font-size: 0.75rem;
+        color: var(--indigo-lt);
+        white-space: nowrap;
+        padding-top: 2px;
+      }
+      .edu-name {
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-bottom: 0.2rem;
+      }
+      .edu-detail {
+        font-size: 0.82rem;
+        color: var(--slate);
+      }
+
+      /* ── SKILLS ── */
+      #skills {
+        background: var(--bg);
+      }
+      .skills-wrap {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+      .skill-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 1.75rem;
+        transition:
+          border-color 0.2s,
+          transform 0.2s;
+      }
+      .skill-card:hover {
+        border-color: var(--indigo);
+        transform: translateY(-3px);
+      }
+      .skill-icon {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(99, 102, 241, 0.1);
+        border-radius: 10px;
+        border: 1px solid rgba(99, 102, 241, 0.2);
+      }
+      .skill-name {
+        font-family: var(--font-d);
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+      }
+      .skill-desc {
+        font-size: 0.82rem;
+        color: var(--slate);
+        margin-bottom: 1rem;
+      }
+      .skill-bar-bg {
+        background: var(--border);
+        border-radius: 4px;
+        height: 4px;
+        overflow: hidden;
+      }
+      .skill-bar {
+        height: 4px;
+        border-radius: 4px;
+        background: linear-gradient(90deg, var(--indigo), var(--cyan));
+      }
+
+      /* ── PROJECTS ── */
+      #projects {
+        background: var(--bg2);
+      }
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 1.5rem;
+      }
+      .project-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        overflow: hidden;
+        transition:
+          border-color 0.25s,
+          transform 0.25s;
+        display: flex;
+        flex-direction: column;
+      }
+      .project-card:hover {
+        border-color: var(--indigo);
+        transform: translateY(-4px);
+        box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4);
+      }
+      .project-img-wrap {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 16/9;
+      }
+      .project-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s;
+      }
+      .project-card:hover .project-img-wrap img {
+        transform: scale(1.05);
+      }
+      .project-img-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(7, 12, 24, 0.9) 0%,
+          transparent 60%
+        );
+      }
+      .project-body {
+        padding: 1.5rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .project-title {
+        font-family: var(--font-d);
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 0.6rem;
+      }
+      .project-desc {
+        font-size: 0.85rem;
+        color: var(--slate);
+        line-height: 1.7;
+        margin-bottom: 1.25rem;
+        flex: 1;
+      }
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-bottom: 1.25rem;
+      }
+      .tag {
+        font-family: var(--font-m);
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+        border-radius: 4px;
+        background: rgba(99, 102, 241, 0.12);
+        color: var(--indigo-lt);
+        border: 1px solid rgba(99, 102, 241, 0.2);
+      }
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--indigo-lt);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .project-link:hover {
+        color: var(--cyan);
+      }
+      .project-link svg {
+        width: 14px;
+        height: 14px;
+      }
+
+      /* ── CONTACT ── */
+      #contact {
+        background: var(--bg);
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 4rem;
+        align-items: start;
+      }
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 1.25rem;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+      }
+      .contact-icon {
+        width: 40px;
+        height: 40px;
+        background: rgba(99, 102, 241, 0.12);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        flex-shrink: 0;
+      }
+      .contact-label {
+        font-size: 0.72rem;
+        color: var(--slate);
+        margin-bottom: 0.1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .contact-val {
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+      .contact-val a {
+        color: var(--white);
+        text-decoration: none;
+      }
+      .contact-val a:hover {
+        color: var(--indigo-lt);
+      }
+      .social-row {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 0.5rem;
+      }
+      .social-btn {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        background: var(--card);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 1.1rem;
+        color: var(--slate);
+        transition: all 0.2s;
+      }
+      .social-btn:hover {
+        border-color: var(--indigo);
+        color: var(--indigo-lt);
+        transform: translateY(-2px);
+      }
+
+      /* Contact form */
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .form-field label {
+        display: block;
+        font-size: 0.78rem;
+        font-weight: 500;
+        color: var(--slate);
+        margin-bottom: 0.4rem;
+        letter-spacing: 0.04em;
+      }
+      .form-field input,
+      .form-field textarea {
+        width: 100%;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 0.75rem 1rem;
+        color: var(--white);
+        font-family: var(--font-b);
+        font-size: 0.9rem;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      .form-field input:focus,
+      .form-field textarea:focus {
+        border-color: var(--indigo);
+      }
+      .form-field textarea {
+        resize: vertical;
+        min-height: 130px;
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        background: var(--bg2);
+        border-top: 1px solid var(--border);
+        text-align: center;
+        padding: 2rem 5%;
+        font-size: 0.82rem;
+        color: var(--slate-dim);
+      }
+      footer span {
+        color: var(--indigo-lt);
+      }
+
+      /* ── SCROLL-TO-TOP ── */
+      .back-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 42px;
+        height: 42px;
+        background: var(--indigo);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.1rem;
+        box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+        transition:
+          background 0.2s,
+          transform 0.2s;
+      }
+      .back-top:hover {
+        background: var(--indigo-lt);
+        transform: translateY(-2px);
+      }
+
+      /* ── MOBILE ── */
+      @media (max-width: 768px) {
+        .hero-grid,
+        .about-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+        .terminal {
+          display: none;
+        }
+        nav {
+          padding: 1rem 4%;
+        }
+        .nav-links {
+          gap: 1.2rem;
+        }
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+        .avatar-badge {
+          right: 0;
+        }
+      }
+      @media (max-width: 500px) {
+        .nav-links li:not(:last-child) {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
     <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <div class="nav-logo"><span>&lt;</span>saurabh<span>/&gt;</span></div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
     </nav>
-  </header>
-  <!-- Header End Here -->
 
-
-  <!-- Home Section Start Here -->
-
-  <section id="home" class="section home">
-    <div class="intro">
-      <h1>Hello, I'm <span>Saurabh Kumar</span></h1>
-      <p>Web Developer | Java Developer | Tech Enthusiast</p>
-
-      <div class="cta-buttons">
-        <a href="Saurabh_Resume.pdf" download class="btn-resume">
-          <i class="ri-download-2-line"></i> Download Resume
-        </a>
-        <a href="#contact" class="btn-hire-me">
-          <i class="ri-mail-send-line"></i> Hire Me
-        </a>
+    <!-- HERO -->
+    <section id="home">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="hero-grid">
+        <div class="hero-left">
+          <div class="hero-eyebrow">Available for opportunities</div>
+          <h1>
+            Building things<br />for the <span class="gradient-text">web</span
+            ><br />& beyond.
+          </h1>
+          <p class="hero-subtitle">
+            I'm Saurabh Kumar — a full-stack developer crafting performant web
+            applications with Java, Spring Boot, and React.
+          </p>
+          <div class="btn-group">
+            <a
+              href="https://saurabh-kumar-dev.netlify.app/Saurabh_Resume.pdf"
+              class="btn btn-primary"
+              target="_blank">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download Resume
+            </a>
+            <a href="#contact" class="btn btn-outline">Let's talk →</a>
+          </div>
+        </div>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="dot dot-r"></span>
+            <span class="dot dot-y"></span>
+            <span class="dot dot-g"></span>
+          </div>
+          <div class="terminal-body">
+            <div class="t-comment">// saurabh_kumar.json</div>
+            <br />
+            <div><span class="t-key">const</span> developer = {</div>
+            <div>
+              &nbsp;&nbsp;<span class="t-key">name:</span>
+              <span class="t-str">"Saurabh Kumar"</span>,
+            </div>
+            <div>
+              &nbsp;&nbsp;<span class="t-key">role:</span>
+              <span class="t-str">"Full-Stack Developer"</span>,
+            </div>
+            <div>
+              &nbsp;&nbsp;<span class="t-key">location:</span>
+              <span class="t-str">"Patna, Bihar 🇮🇳"</span>,
+            </div>
+            <div>
+              &nbsp;&nbsp;<span class="t-key">education:</span>
+              <span class="t-str">"B.Tech CSE — CU"</span>,
+            </div>
+            <div>
+              &nbsp;&nbsp;<span class="t-key">stack:</span>
+              <span class="t-arr">[</span>
+            </div>
+            <div>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"Java"</span>,
+              <span class="t-str">"Spring Boot"</span>,
+            </div>
+            <div>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"React"</span>,
+              <span class="t-str">"MySQL"</span>
+            </div>
+            <div>&nbsp;&nbsp;<span class="t-arr">]</span>,</div>
+            <div>
+              &nbsp;&nbsp;<span class="t-key">status:</span>
+              <span class="t-val">✅ Open to work</span>
+            </div>
+            <div>};</div>
+            <br />
+            <div>
+              <span class="t-key">console</span>.<span class="t-val">log</span
+              >(<span class="t-str">"Let's build something!"</span>)
+              <span class="cursor"></span>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-
-    </div>
-  </section>
-  <!-- Home Section End Here -->
-
-
-  <!-- About Section Start Here -->
-
-  <section id="about" class="section about">
-    <div class="heading-with-line">
-      <h2>About Us</h2>
-      <div class="title-underline"></div>
-    </div>
-
-
-    <div class="about-wrapper">
-      <div class="about-img">
-        <img src="./Image/IMG_0409.JPG" alt="Profile Picture" />
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-inner">
+        <div class="about-grid">
+          <div class="avatar-wrap">
+            <img
+              class="avatar-img"
+              src="https://saurabh-kumar-dev.netlify.app/Image/IMG_0409.JPG"
+              alt="Saurabh Kumar" />
+            <div class="avatar-badge">🎓 B.Tech CSE — 7.66 CGPA</div>
+          </div>
+          <div class="about-text">
+            <div class="section-label">Who I am</div>
+            <h2>Passionate about<br />clean code &amp; great UX</h2>
+            <p>
+              Hello! I'm Saurabh Kumar, a dedicated full-stack developer who
+              graduated from Chandigarh University in 2024. I love solving real
+              problems — whether that's architecting a backend service or
+              crafting a pixel-perfect frontend experience.
+            </p>
+            <p>
+              My passion lies in building systems that are both technically
+              sound and genuinely useful to people. I'm always learning, always
+              building.
+            </p>
+            <div class="edu-list">
+              <div class="edu-item">
+                <div class="edu-year">2024</div>
+                <div>
+                  <div class="edu-name">
+                    B.Tech — Computer Science &amp; Engineering
+                  </div>
+                  <div class="edu-detail">
+                    Chandigarh University, Gharuan &nbsp;·&nbsp; CGPA: 7.66
+                  </div>
+                </div>
+              </div>
+              <div class="edu-item">
+                <div class="edu-year">2020</div>
+                <div>
+                  <div class="edu-name">12th Grade</div>
+                  <div class="edu-detail">
+                    St. Karen's Secondary School, Bihar &nbsp;·&nbsp; 84%
+                  </div>
+                </div>
+              </div>
+              <div class="edu-item">
+                <div class="edu-year">2018</div>
+                <div>
+                  <div class="edu-name">10th Grade</div>
+                  <div class="edu-detail">
+                    D.A.V Public School, Bihar &nbsp;·&nbsp; 70%
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="about-details">
-        <p>Hello! I'm <strong>Saurabh Kumar</strong>, a dedicated and creative web developer with a strong background in
-          frontend and backend technologies. I love solving problems, building responsive interfaces, and continuously
-          learning.</p>
+    </section>
 
-        <div class="about-info">
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="dot"></div>
-              <div class="timeline-content">
-                <h4>
-                  B.Tech in CSE
-                  <span class="year-tag">2024</span>
-                </h4>
-                <p>Chandigarh University, Gharuan (7.66 CGPA)</p>
-              </div>
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-inner">
+        <div class="section-label">What I work with</div>
+        <h2>Skills &amp; Technologies</h2>
+        <p class="section-desc">
+          A snapshot of the tools and languages I use to bring ideas from
+          concept to production.
+        </p>
+        <div class="skills-wrap">
+          <div class="skill-card">
+            <div class="skill-icon">☕</div>
+            <div class="skill-name">Java</div>
+            <div class="skill-desc">
+              Core language expertise — OOP, collections, streams, and
+              multithreading.
             </div>
-
-            <div class="timeline-item">
-              <div class="dot"></div>
-              <div class="timeline-content">
-                <h4>
-                  12th
-                  <span class="year-tag">2020</span>
-                </h4>
-                <p>St. Karen’s Secondary School, Bihar (84%)</p>
-              </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" style="width: 90%"></div>
             </div>
-
-            <div class="timeline-item last">
-              <div class="dot"></div>
-              <div class="timeline-content">
-                <h4>
-                  10th
-                  <span class="year-tag">2018</span>
-                </h4>
-                <p>D.A.V Public School, Bihar (70%)</p>
-              </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🍃</div>
+            <div class="skill-name">Spring Boot</div>
+            <div class="skill-desc">
+              REST APIs, Spring Security, Hibernate ORM, and microservice
+              architecture.
             </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">⚛️</div>
+            <div class="skill-name">React JS</div>
+            <div class="skill-desc">
+              Component-based UIs, hooks, state management, and SPA development.
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🗄️</div>
+            <div class="skill-name">MySQL</div>
+            <div class="skill-desc">
+              Relational data modelling, complex joins, stored procedures, and
+              optimisation.
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" style="width: 82%"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🌐</div>
+            <div class="skill-name">HTML5 / CSS3</div>
+            <div class="skill-desc">
+              Semantic markup, responsive layouts, animations, and
+              accessibility.
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" style="width: 92%"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">⚡</div>
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-desc">
+              ES6+, async/await, DOM APIs, and frontend tooling.
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" style="width: 78%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
-
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-inner">
+        <div class="section-label">What I've built</div>
+        <h2>Featured Projects</h2>
+        <p class="section-desc">
+          A selection of real-world applications spanning service marketplaces,
+          healthcare, and productivity tools.
+        </p>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img
+                src="https://saurabh-kumar-dev.netlify.app/Image/fixly.png"
+                alt="Fixly Platform" />
+              <div class="project-img-overlay"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-title">Fixly Platform</div>
+              <p class="project-desc">
+                A role-based service marketplace where users book local
+                services, providers manage requests, and admins oversee
+                categories. Features OTP-based job verification, ratings, and a
+                self-onboarding flow for providers.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Spring Boot</span>
+                <span class="tag">React JS</span>
+                <span class="tag">Spring Security</span>
+                <span class="tag">RBAC</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <a
+                href="https://fixlyoffical.netlify.app/"
+                class="project-link"
+                target="_blank">
+                View Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </a>
+            </div>
           </div>
 
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img
+                src="https://saurabh-kumar-dev.netlify.app/Image/PGLife.jpg"
+                alt="PG Life" />
+              <div class="project-img-overlay"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-title">PG Life</div>
+              <p class="project-desc">
+                A student housing platform that helps users find PG
+                accommodations across India. Supports location-based search,
+                photo browsing, reviews, and online booking to simplify the
+                room-hunt experience.
+              </p>
+              <div class="tag-list">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">PHP</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <a
+                href="https://github.com/Saurabhh0000/"
+                class="project-link"
+                target="_blank">
+                View on GitHub
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img
+                src="https://saurabh-kumar-dev.netlify.app/Image/careandcure.png"
+                alt="Care And Cure" />
+              <div class="project-img-overlay"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-title">Care &amp; Cure Hospital App</div>
+              <p class="project-desc">
+                A healthcare platform for appointment booking, medical record
+                access, test reports, and online doctor consultations — complete
+                with digital prescriptions and timely reminders.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Spring Boot</span>
+                <span class="tag">Thymeleaf</span>
+                <span class="tag">Java</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <a
+                href="https://github.com/Saurabhh0000/CareAndCureHospitalManagementApp"
+                class="project-link"
+                target="_blank">
+                View on GitHub
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img
+                src="https://saurabh-kumar-dev.netlify.app/Image/EMS.png"
+                alt="Employee Management System" />
+              <div class="project-img-overlay"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-title">Employee Management System</div>
+              <p class="project-desc">
+                A full-stack admin dashboard for employee CRUD operations,
+                project assignment, role-based access control, and secure
+                JWT-based authentication.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Spring Boot</span>
+                <span class="tag">Hibernate</span>
+                <span class="tag">React</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <a
+                href="https://github.com/Saurabhh0000/"
+                class="project-link"
+                target="_blank">
+                View on GitHub
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img
+                src="https://saurabh-kumar-dev.netlify.app/Image/TodoApp.png"
+                alt="Todo App" />
+              <div class="project-img-overlay"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-title">Todo App</div>
+              <p class="project-desc">
+                A responsive task manager with create, update, mark-complete,
+                and delete functionality. Built to be clean, fast, and reliable
+                for everyday productivity.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Spring Boot</span>
+                <span class="tag">Thymeleaf</span>
+                <span class="tag">Hibernate</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <a
+                href="https://github.com/Saurabhh0000/"
+                class="project-link"
+                target="_blank">
+                View on GitHub
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- About Section End Here -->
+    </section>
 
-
-  <!-- Skills Section Start Here -->
-
-  <section id="skills" class="section skills">
-    <div class="heading-with-line">
-      <h2>Skills</h2>
-      <div class="title-underline"></div>
-    </div>
-
-    <div class="skill-icons">
-      <div class="icon-card">
-        <i class="ri-java-fill"></i>
-        <p class="icon-name">Java</p>
-      </div>
-      <div class="icon-card">
-        <i class="ri-html5-fill"></i>
-        <p class="icon-name">HTML5</p>
-      </div>
-      <div class="icon-card">
-        <i class="ri-css3-fill"></i>
-        <p class="icon-name">CSS3</p>
-      </div>
-      <div class="icon-card">
-        <i class="ri-javascript-fill"></i>
-        <p class="icon-name">JavaScript</p>
-      </div>
-      <div class="icon-card">
-        <i class="ri-reactjs-fill"></i>
-        <p class="icon-name">React JS</p>
-      </div>
-      <div class="icon-card">
-        <i class="ri-bootstrap-fill"></i>
-        <p class="icon-name">Bootstrap</p>
-      </div>
-      <div class="icon-card">
-        <i class="devicon-spring-plain colored"></i>
-        <p class="icon-name">Spring Boot</p>
-      </div>
-
-
-    </div>
-  </section>
-  <!-- Skills Section End Here -->
-
-
-  <!-- Projects Section Start Here -->
-
-
-  <section id="projects" class="section projects">
-    <div class="heading-with-line">
-      <h2>Projects</h2>
-      <div class="title-underline"></div>
-    </div>
-
-    <div class="project-container">
-      <div class="project-card">
-  <img src="./Image/fixly.png" alt="Fixly Platform">
-  <h3>Fixly Platform</h3>
-  <p>
-
-Fixly is a web-based platform with a role-based system consisting of user, provider, and admin, where users can book local services based on their location, providers can accept or cancel requests, and admins manage categories and users; once a provider accepts a booking, an OTP is generated on the user side and must be shared after service completion to verify the job, after which users can rate and review the service, and users also have the option to become providers by submitting a form, after which they gain access to the provider dashboard.
-
-  </p>
-
-  <div class="tech-wrapper">
-    <div class="tech">Core Java</div>
-    <div class="tech">SpringBoot</div>
-    <div class="tech">React JS</div>
-    <div class="tech">Spring Security</div>
-    <div class="tech">RBAC - Role Based Access Control</div>
-    <div class="tech">MySQL</div>
-  </div>
-
-  <a href="https://fixlyoffical.netlify.app/" class="live-demo" target="_blank">
-    Live Demo
-  </a>
-</div>
-
-      <div class="project-card">
-        <img src="./Image/PGLife.jpg" alt="PG Life">
-        <h3>PG Life</h3>
-        <p>PG Life is a web-based platform that helps students and working professionals find suitable and affordable
-          PG accommodations across India. It allows users to search rooms based on location, price, and amenities.
-          Users can view photos, read reviews, and book online, making the room-hunting process simple and convenient.
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-inner">
+        <div class="section-label">Get in touch</div>
+        <h2>Let's work together</h2>
+        <p class="section-desc">
+          Open to full-time roles, freelance projects, and interesting
+          collaborations. Drop a message!
         </p>
-        <div class="tech-wrapper">
-          <div class="tech">HTML</div>
-          <div class="tech">CSS</div>
-          <div class="tech">JavaScript</div>
-          <div class="tech">PHP</div>
-          <div class="tech">MySQL</div>
+        <div class="contact-grid">
+          <div>
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                  <div class="contact-label">Phone</div>
+                  <div class="contact-val">
+                    <a href="tel:+916203298231">+91 6203298231</a>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div>
+                  <div class="contact-label">Email</div>
+                  <div class="contact-val">
+                    <a href="mailto:saurabhkeshri074@gmail.com"
+                      >saurabhkeshri074@gmail.com</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <div class="contact-label">Location</div>
+                  <div class="contact-val">Patna, Bihar, India</div>
+                </div>
+              </div>
+            </div>
+            <div class="social-row" style="margin-top: 1.5rem">
+              <a
+                class="social-btn"
+                href="https://github.com/Saurabhh0000"
+                target="_blank"
+                title="GitHub">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+              </a>
+              <a
+                class="social-btn"
+                href="https://www.linkedin.com/in/saurabh-kumar-fronted-developer/"
+                target="_blank"
+                title="LinkedIn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </a>
+              <a
+                class="social-btn"
+                href="https://x.com/Saurabh75660541"
+                target="_blank"
+                title="Twitter / X">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+              <a
+                class="social-btn"
+                href="https://wa.me/916203298231"
+                target="_blank"
+                title="WhatsApp">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <form class="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-field">
+                <label>First Name</label
+                ><input type="text" placeholder="Saurabh" />
+              </div>
+              <div class="form-field">
+                <label>Last Name</label
+                ><input type="text" placeholder="Kumar" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label>Email</label
+              ><input type="email" placeholder="hello@email.com" />
+            </div>
+            <div class="form-field">
+              <label>Subject</label
+              ><input type="text" placeholder="Project collaboration..." />
+            </div>
+            <div class="form-field">
+              <label>Message</label
+              ><textarea
+                placeholder="Tell me about your project or opportunity..."></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              style="align-self: flex-start">
+              Send Message →
+            </button>
+          </form>
         </div>
-        <a href="https://github.com/Saurabhh0000/" class="live-demo" target="_blank">
-          Live Demo
-        </a>
-
       </div>
+    </section>
 
+    <!-- FOOTER -->
+    <footer>
+      © 2025 <span>Saurabh Kumar</span>. All rights reserved. &nbsp;·&nbsp;
+      Designed &amp; built with ❤️
+    </footer>
 
-      <div class="project-card">
-        <img src="./Image/careandcure.png" alt="Care And Cure Hospital App">
-        <h3>Care And Cure Hospital App</h3>
-        <p>The Care and Cure Hospital App is a user-friendly healthcare platform designed to simplify patient care.
-          It allows users to book appointments, access medical records, receive test reports, and consult doctors
-          online.
-          The app enhances patient experience by offering timely reminders, digital prescriptions, and
-          seamless communication with healthcare professionals.
-        </p>
-        <div class="tech-wrapper">
-          <div class="tech">Thymeleaf</div>
-          <div class="tech">Java</div>
-          <div class="tech">Springboot</div>
-          <div class="tech">MySQL</div>
-        </div>
-        <a href="https://github.com/Saurabhh0000/CareAndCureHospitalManagementApp" class="live-demo" target="_blank">
-          Live Demo
-        </a>
+    <a href="#home" class="back-top" title="Back to top">↑</a>
 
-      </div>
-
-      <!-- Employee Management System Project -->
-  <div class="project-card">
-    <img src="./Image/EMS.png" alt="Employee Management System">
-    <h3>Employee Management System</h3>
-    <p>
-      Employee Management System is a full-stack web application that allows admins
-      to manage employees efficiently. It supports employee CRUD operations,
-      role-based access, project assignment, and secure authentication.
-    </p>
-
-    <div class="tech-wrapper">
-      <div class="tech">Java</div>
-      <div class="tech">Spring Boot</div>
-      <div class="tech">Hibernate</div>
-      <div class="tech">MySQL</div>
-      <div class="tech">React</div>
-    </div>
-
-    <a href="https://github.com/Saurabhh0000/" class="live-demo" target="_blank">
-      Live Demo
-    </a>
-  </div>
-
-  <!-- Todo App Project -->
-  <div class="project-card">
-    <img src="./Image/TodoApp.png" alt="Todo App">
-    <h3>Todo App</h3>
-    <p>
-      Todo App is a simple and responsive task management application that allows users
-      to add, update, mark complete, and delete tasks. It helps users stay organized
-      and improve daily productivity.
-    </p>
-
-    <div class="tech-wrapper">
-      <div class="tech">Java</div>
-      <div class="tech">Springboot</div>
-      <div class="tech">MySQL</div>
-      <div class="tech">Thymeleaf</div>
-      <div class="tech">Hibernate</div>
-    </div>
-
-    <a href="https://github.com/Saurabhh0000/" class="live-demo" target="_blank">
-      Live Demo
-    </a>
-  </div>
-
-
-
-    </div>
-  </section>
-  <!-- Project Section End Here -->
-
-
-  <!-- Contact Section Start Here -->
-
-  <section id="contact" class="section contact">
-    <div class="heading-with-line">
-      <h2>Contact</h2>
-      <div class="title-underline"></div>
-    </div>
-
-    <div class="contact-wrapper">
-      <div class="contact-info">
-        <p><i class="ri-phone-fill"></i> <strong>Phone:</strong> +91 6203298231</p>
-        <p><i class="ri-mail-line"></i> <strong>Email:</strong> <a
-            href="mailto:saurabhkeshri074@gmail.com">saurabhkeshri074@gmail.com</a></p>
-        <p><i class="ri-map-pin-line"></i> <strong>Address:</strong> Patna, Bihar, India</p>
-      </div>
-      <div class="contact-img">
-        <img src="./Image/5124556.jpg" alt="Contact Illustration" />
-      </div>
-    </div>
-  </section>
-  <!-- Contact Section End Here -->
-
-
-  <!-- Footer Start Here -->
-
-  <footer>
-    <p>Connect with me:</p>
-    <div class="social-icons">
-      <a href="https://x.com/Saurabh75660541" target="_blank" title="Twitter">
-        <i class="ri-twitter-x-line"></i>
-      </a>
-      <a href="https://github.com/Saurabhh0000" target="_blank" title="GitHub">
-        <i class="ri-github-fill"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/saurabh-kumar-fronted-developer/" target="_blank" title="LinkedIn">
-        <i class="ri-linkedin-box-fill"></i>
-      </a>
-    </div>
-    <p>&copy; 2025 Saurabh Kumar. All rights reserved.</p>
-  </footer>
-
-  <!-- Footer End Here -->
-
-  <!-- Back-to-top Start Here -->
-  <a href="#home" class="back-to-top" title="Back to Top">
-    <i class="ri-arrow-up-s-line"></i>
-  </a>
-  <!-- Back-to-top Ends Here -->
-
-  <!-- Floating Whatsapp Start Here -->
-  <a href="https://wa.me/916203298231" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
-    <i class="ri-whatsapp-fill"></i>
-  </a>
-  <!-- Floating Whatsapp Ends Here -->
-
-
-
-  <!-- JavaScript Start Here -->
-
-  <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.2
-    });
-
-    document.querySelectorAll('.timeline-item').forEach(item => {
-      observer.observe(item);
-    });
-  </script>
-  <script>
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        const preloader = document.getElementById("preloader");
-        preloader.style.opacity = "0";
-        preloader.style.visibility = "hidden";
-      }, 1800); // 1.8 seconds delay for a better feel
-    });
-  </script>
-
-  <!-- JavaScript Ends Here -->
-
-
-</body>
-
+    <script>
+      function handleSubmit(e) {
+        e.preventDefault();
+        const btn = e.target.querySelector('button[type="submit"]');
+        btn.textContent = "✓ Message Sent!";
+        btn.style.background = "#22D3EE";
+        btn.style.boxShadow = "0 0 24px rgba(34,211,238,0.35)";
+        setTimeout(() => {
+          btn.textContent = "Send Message →";
+          btn.style.background = "";
+          btn.style.boxShadow = "";
+          e.target.reset();
+        }, 3000);
+      }
+    </script>
+  </body>
 </html>
