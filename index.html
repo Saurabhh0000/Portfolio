@@ -1,226 +1,74 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#070A12" />
-    <title>Saurabh Kumar — Java Full Stack Developer</title>
-    <meta name="description" content="Saurabh Kumar — Java Full Stack Developer specializing in Java, Spring Boot, REST APIs, Spring Security and React." />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="preloader" aria-hidden="true">
-      <div class="preloader-inner">
-        <span class="mono">SAURABH.KUMAR</span>
-        <div class="preloader-line"><span></span></div>
-        <small>JAVA / SPRING / REACT</small>
-      </div>
-    </div>
-
-    <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress__bar"></span></div>
-
-    <nav id="nav" aria-label="Primary navigation">
-      <a class="nav-logo mono" href="#home">SK<span>_</span></a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="nav-actions">
-        <a class="nav-resume" href="Saurabh_Resume.pdf" target="_blank" rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Resume</a>
-        <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
-    </nav>
-
-    <main>
-      <section id="home" class="hero section-shell">
-        <div class="hero-noise" aria-hidden="true"></div>
-        <div class="hero-orb hero-orb-a" data-parallax="0.035" aria-hidden="true"></div>
-        <div class="hero-orb hero-orb-b" data-parallax="-0.025" aria-hidden="true"></div>
-
-        <div class="hero-grid">
-          <div class="hero-copy" data-reveal="up">
-            <div class="eyebrow"><span class="eyebrow-line"></span> JAVA FULL STACK DEVELOPER</div>
-            <p class="hero-kicker mono">Available for full-time roles · Open to relocation</p>
-            <h1>Building <span>useful software</span> from API to interface.</h1>
-            <p class="hero-lead">I'm <strong>Saurabh Kumar</strong> — a Java Full Stack Developer focused on secure backend systems, practical APIs, and polished React experiences.</p>
-
-            <div class="hero-cta-row">
-              <a class="button button-primary" href="#projects">Explore Projects <i class="fa-solid fa-arrow-down"></i></a>
-              <a class="button button-secondary" href="Saurabh_Resume.pdf" target="_blank" rel="noreferrer">View Resume <i class="fa-regular fa-file-lines"></i></a>
-            </div>
-
-            <div class="hero-metrics">
-              <div class="metric"><strong>5+</strong><span>Projects</span></div>
-              <div class="metric-divider"></div>
-              <div class="metric"><strong>Java</strong><span>Primary stack</span></div>
-              <div class="metric-divider"></div>
-              <div class="metric"><strong>2024</strong><span>Graduate</span></div>
-            </div>
-          </div>
-
-          <div class="hero-visual" data-reveal="right" data-parallax="0.05">
-            <div class="visual-frame">
-              <div class="visual-topbar"><span>system.java</span><div><i></i><i></i><i></i></div></div>
-              <div class="visual-content">
-                <span class="code-comment">// Fixly — booking flow</span>
-                <span><b class="code-purple">@Service</b></span>
-                <span><b class="code-blue">public class</b> BookingService {</span>
-                <span class="indent"><b class="code-blue">public</b> BookingResponse createBooking(...)</span>
-                <span class="indent-2">bookingRepo.<b class="code-green">save</b>(booking);</span>
-                <span class="indent-2">otpService.<b class="code-green">sendVerificationOtp</b>(booking);</span>
-                <span class="indent-2"><b class="code-blue">return</b> mapper.toResponse(booking);</span>
-                <span>}</span>
-              </div>
-              <div class="visual-badge"><span></span> Secure by default · JWT / RBAC / OTP</div>
-            </div>
-            <div class="hero-float-card float-a" data-parallax="0.08"><span>01</span><strong>REST APIs</strong><small>Spring Boot</small></div>
-            <div class="hero-float-card float-b" data-parallax="-0.06"><span>02</span><strong>Frontend</strong><small>React JS</small></div>
-          </div>
-        </div>
-
-        <a class="hero-scroll" href="#about"><span class="mono">SCROLL TO EXPLORE</span><i class="fa-solid fa-arrow-down"></i></a>
-      </section>
-
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee-track">
-          <span>JAVA</span><b>✦</b><span>SPRING BOOT</span><b>✦</b><span>SPRING SECURITY</span><b>✦</b><span>REACT</span><b>✦</b><span>MYSQL</span><b>✦</b><span>REST APIS</span><b>✦</b><span>HIBERNATE</span><b>✦</b><span>JWT</span><b>✦</b>
-          <span>JAVA</span><b>✦</b><span>SPRING BOOT</span><b>✦</b><span>SPRING SECURITY</span><b>✦</b><span>REACT</span><b>✦</b><span>MYSQL</span><b>✦</b><span>REST APIS</span><b>✦</b><span>HIBERNATE</span><b>✦</b><span>JWT</span><b>✦</b>
-        </div>
-      </div>
-
-      <section id="about" class="section-shell section-dark split-section">
-        <div class="split-media" data-reveal="left">
-          <div class="portrait-frame">
-            <img src="IMG_0409.JPG" alt="Saurabh Kumar" loading="lazy" />
-            <div class="portrait-gradient"></div>
-            <div class="portrait-note mono">ENGINEERING / BUILD / LEARN</div>
-          </div>
-        </div>
-        <div class="split-copy" data-reveal="up">
-          <div class="eyebrow"><span class="eyebrow-line"></span> ABOUT ME</div>
-          <h2>Backend thinking. Product mindset.</h2>
-          <p>I'm a Java Full Stack Developer trained through Infosys Springboard, with hands-on experience building multi-role web applications and taking projects from data modelling to deployment.</p>
-          <p>My strongest work is Fixly — a service marketplace with JWT authentication, role-based access control, OTP-verified job flows, and a React frontend backed by Spring Boot and MySQL.</p>
-          <div class="about-points">
-            <article><span>01</span><div><strong>Security-aware APIs</strong><small>JWT, Spring Security and RBAC across backend projects.</small></div></article>
-            <article><span>02</span><div><strong>Relational modelling</strong><small>MySQL, Hibernate and Spring Data JPA for connected business workflows.</small></div></article>
-            <article><span>03</span><div><strong>End-to-end ownership</strong><small>Design, implementation, debugging and deployment — not just isolated screens.</small></div></article>
-          </div>
-        </div>
-      </section>
-
-      <section id="experience" class="section-shell section-light">
-        <div class="section-heading" data-reveal="up">
-          <div><div class="eyebrow"><span class="eyebrow-line"></span> EXPERIENCE</div><h2>Where I learned to ship.</h2></div>
-          <p>Training plus independent product work, with an emphasis on real application architecture.</p>
-        </div>
-
-        <div class="experience-stack">
-          <article class="experience-card experience-featured" data-reveal="up">
-            <div class="experience-index mono">01</div>
-            <div class="experience-main">
-              <div class="experience-meta"><span>2023 — 2024</span><span>REMOTE</span><span>INTERNSHIP</span></div>
-              <h3>Java Full Stack Development Intern</h3>
-              <p class="company">Infosys Springboard</p>
-              <p>Completed structured training across Java OOP, Spring Boot REST APIs, Hibernate, Spring Security and full-stack architecture; built the Fixly service marketplace as a capstone.</p>
-              <div class="chip-row"><span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>Hibernate</span><span>React</span><span>MySQL</span></div>
-            </div>
-            <div class="experience-side"><span>200+</span><small>guided learning hours</small></div>
-          </article>
-
-          <article class="experience-card" data-reveal="up">
-            <div class="experience-index mono">02</div>
-            <div class="experience-main">
-              <div class="experience-meta"><span>2022 — PRESENT</span><span>SELF-DIRECTED</span></div>
-              <h3>Independent Full Stack Developer</h3>
-              <p class="company">Product & Project Work</p>
-              <p>Designed and deployed full-stack applications across service marketplaces, healthcare, employee operations, student housing and productivity, including schemas, REST contracts and frontend workflows.</p>
-              <div class="chip-row"><span>REST APIs</span><span>JWT</span><span>JPA</span><span>React</span><span>PHP</span><span>GitHub</span></div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="skills" class="section-shell section-dark skills-section">
-        <div class="section-heading" data-reveal="up">
-          <div><div class="eyebrow"><span class="eyebrow-line"></span> SKILLS</div><h2>My stack, without the noise.</h2></div>
-          <p>Grouped around the work I actually build: backend services, interfaces, persistence and developer tooling.</p>
-        </div>
-
-        <div class="skills-layout">
-          <div class="skill-orbit" data-reveal="left">
-            <div class="orbit-core"><strong>JAVA</strong><span>BACKEND FIRST</span></div>
-            <div class="orbit-ring ring-one"></div><div class="orbit-ring ring-two"></div>
-            <span class="skill-node node-a">Spring Boot</span><span class="skill-node node-b">React</span><span class="skill-node node-c">MySQL</span><span class="skill-node node-d">JWT</span><span class="skill-node node-e">Hibernate</span><span class="skill-node node-f">REST</span>
-          </div>
-          <div class="skills-list" data-reveal="up">
-            <article><span class="skill-label mono">01 / BACKEND</span><h3>Java · Spring Boot · Spring Security</h3><p>OOP, collections, streams, REST APIs, dependency injection, JWT, RBAC, stateless sessions.</p></article>
-            <article><span class="skill-label mono">02 / DATA</span><h3>MySQL · Hibernate · Spring Data JPA</h3><p>Schema design, entity relationships, repository patterns, custom queries and persistence workflows.</p></article>
-            <article><span class="skill-label mono">03 / FRONTEND</span><h3>React JS · JavaScript · HTML · CSS</h3><p>SPA routing, component-based UI, async data flow and responsive layouts.</p></article>
-            <article><span class="skill-label mono">04 / TOOLING</span><h3>Git · GitHub · IntelliJ IDEA · Postman</h3><p>Version control, branches, pull requests, API testing and day-to-day Java development.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="section-shell section-light projects-section">
-        <div class="project-heading" data-reveal="up">
-          <div><div class="eyebrow"><span class="eyebrow-line"></span> SELECTED PROJECTS</div><h2>Built for real workflows.</h2></div>
-          <div class="project-nav-meta"><span class="project-count mono">01 / 05</span><span class="project-hint mono">DRAG / SCROLL →</span></div>
-        </div>
-
-        <div class="project-reel" aria-label="Horizontal project gallery">
-          <article class="project-panel featured-project" data-reveal="up">
-            <div class="project-number mono">01</div>
-            <div class="project-image-wrap"><img src="Image/fixly.png" alt="Fixly service marketplace" loading="lazy" /><span class="live-pill"><i></i> LIVE PROJECT</span></div>
-            <div class="project-info"><span class="project-category">FLAGSHIP / FULL STACK</span><h3>Fixly</h3><p>A role-based marketplace connecting customers with local service providers. Built end-to-end with a focus on secure access and correct booking workflows.</p><div class="chip-row"><span>Spring Boot</span><span>Spring Security</span><span>JWT</span><span>RBAC</span><span>React</span><span>MySQL</span></div><div class="project-actions"><a class="button button-primary" href="https://fixlyoffical.netlify.app/" target="_blank" rel="noreferrer">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a class="text-link" href="https://github.com/Saurabhh0000/Fixly-Platform" target="_blank" rel="noreferrer">GitHub <i class="fa-solid fa-arrow-right"></i></a></div></div>
-          </article>
-
-          <article class="project-panel" data-reveal="up"><div class="project-number mono">02</div><div class="project-image-wrap"><img src="Image/careandcure.png" alt="Care and Cure hospital management" loading="lazy" /></div><div class="project-info"><span class="project-category">HEALTHCARE</span><h3>Care & Cure</h3><p>Hospital management covering appointments, medical records, test reports, online consultation and digital prescriptions.</p><div class="chip-row"><span>Spring Boot</span><span>Thymeleaf</span><span>Hibernate</span><span>MySQL</span></div><a class="text-link" href="https://github.com/Saurabhh0000/CareAndCureHospitalManagementApp" target="_blank" rel="noreferrer">View on GitHub <i class="fa-solid fa-arrow-right"></i></a></div></article>
-
-          <article class="project-panel" data-reveal="up"><div class="project-number mono">03</div><div class="project-image-wrap"><img src="Image/EMS.png" alt="Employee management system" loading="lazy" /></div><div class="project-info"><span class="project-category">ENTERPRISE TOOL</span><h3>Employee Management</h3><p>JWT-authenticated React dashboard for employee CRUD, departments, project assignment and role-based operations.</p><div class="chip-row"><span>Spring Boot</span><span>React</span><span>JWT</span><span>MySQL</span></div><a class="text-link" href="https://github.com/Saurabhh0000/" target="_blank" rel="noreferrer">View repository <i class="fa-solid fa-arrow-right"></i></a></div></article>
-
-          <article class="project-panel" data-reveal="up"><div class="project-number mono">04</div><div class="project-image-wrap"><img src="Image/PGLife.jpg" alt="PG Life student housing platform" loading="lazy" /></div><div class="project-info"><span class="project-category">WEB PLATFORM</span><h3>PG Life</h3><p>Location-based student housing platform with city filtering, property photos, reviews and online booking.</p><div class="chip-row"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span></div><a class="text-link" href="https://github.com/Saurabhh0000/" target="_blank" rel="noreferrer">View repository <i class="fa-solid fa-arrow-right"></i></a></div></article>
-
-          <article class="project-panel" data-reveal="up"><div class="project-number mono">05</div><div class="project-image-wrap"><img src="Image/TodoApp.png" alt="Todo app with Spring MVC" loading="lazy" /></div><div class="project-info"><span class="project-category">SPRING MVC</span><h3>Todo App</h3><p>Task manager demonstrating Spring MVC routing, Thymeleaf server-side rendering, Hibernate persistence and MySQL storage.</p><div class="chip-row"><span>Spring MVC</span><span>Thymeleaf</span><span>Hibernate</span><span>MySQL</span></div><a class="text-link" href="https://github.com/Saurabhh0000/" target="_blank" rel="noreferrer">View repository <i class="fa-solid fa-arrow-right"></i></a></div></article>
-        </div>
-      </section>
-
-      <section id="certifications" class="section-shell section-dark">
-        <div class="section-heading" data-reveal="up"><div><div class="eyebrow"><span class="eyebrow-line"></span> CERTIFICATIONS</div><h2>Structured learning, verified.</h2></div><p>Training that complements the project work.</p></div>
-        <div class="cert-grid">
-          <article class="cert-card cert-highlight" data-reveal="up"><div class="cert-icon"><i class="fa-solid fa-award"></i></div><div><span>INTERNSHIP CERTIFICATE</span><h3>Java Full Stack Development</h3><p>Infosys Springboard · 2023 — 2024</p></div></article>
-          <article class="cert-card" data-reveal="up"><div class="cert-icon"><i class="devicon-java-plain"></i></div><div><span>COURSE COMPLETION</span><h3>Core Java & OOP Principles</h3><p>Infosys Springboard · 2023</p></div></article>
-          <article class="cert-card" data-reveal="up"><div class="cert-icon"><i class="devicon-spring-plain"></i></div><div><span>COURSE COMPLETION</span><h3>Spring Boot & REST API Development</h3><p>Infosys Springboard · 2023</p></div></article>
-          <article class="cert-card" data-reveal="up"><div class="cert-icon"><i class="devicon-react-original"></i></div><div><span>COURSE COMPLETION</span><h3>React JS Fundamentals</h3><p>Infosys Springboard · 2024</p></div></article>
-          <article class="cert-card" data-reveal="up"><div class="cert-icon"><i class="devicon-mysql-plain"></i></div><div><span>COURSE COMPLETION</span><h3>Database Design with MySQL</h3><p>Infosys Springboard · 2023</p></div></article>
-        </div>
-      </section>
-
-      <section id="contact" class="section-shell section-light contact-section">
-        <div class="contact-grid">
-          <div data-reveal="up"><div class="eyebrow"><span class="eyebrow-line"></span> LET'S CONNECT</div><h2>Have a Java role or a product problem?</h2><p class="contact-lead">I’m open to full-time opportunities, technical conversations and projects where backend engineering actually matters.</p><div class="contact-actions"><a class="button button-primary" href="mailto:saurabhkeshri074@gmail.com">Send an Email <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a class="button button-secondary" href="https://www.linkedin.com/in/saurabh-kumar-fronted-developer/" target="_blank" rel="noreferrer">LinkedIn <i class="fa-brands fa-linkedin-in"></i></a></div></div>
-          <div class="contact-details" data-reveal="right">
-            <a href="mailto:saurabhkeshri074@gmail.com"><span class="mono">EMAIL</span><strong>saurabhkeshri074@gmail.com</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            <a href="tel:+916203298231"><span class="mono">PHONE</span><strong>+91 6203 298 231</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            <div><span class="mono">LOCATION</span><strong>Patna, Bihar · Open to remote & relocation</strong><i class="fa-solid fa-location-dot"></i></div>
-            <div class="socials"><a href="https://github.com/Saurabhh0000" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a><a href="https://www.linkedin.com/in/saurabh-kumar-fronted-developer/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://wa.me/916203298231" target="_blank" rel="noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a><a href="https://x.com/Saurabh75660541" target="_blank" rel="noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer><div class="footer-inner"><span class="mono">SK_</span><span>Java Full Stack Developer · Built with intention.</span><span class="mono">© 2026</span></div></footer>
-    <a class="back-top" href="#home" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
-    <script src="script.js"></script>
-  </body>
-</html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#080A12">
+<title>Saurabh Kumar | Java Full Stack Developer</title>
+<meta name="description" content="Saurabh Kumar — Java Full Stack Developer specializing in Java, Spring Boot, REST APIs, Spring Security, React and MySQL.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loader"><div class="loader-mark">SK<span>/</span></div><div class="loader-bar"><i></i></div><small>LOADING PORTFOLIO</small></div>
+<div class="cursor-glow"></div><div class="page-progress"><i></i></div>
+<nav id="nav">
+<a class="brand" href="#home"><span>SK</span><b>.</b></a>
+<div class="nav-links"><a href="#about">About</a><a href="#experience">Experience</a><a href="#stack">Stack</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+<div class="nav-right"><a class="nav-resume" href="Saurabh_Resume.pdf" target="_blank" rel="noreferrer">Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a><button class="menu" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button></div>
+</nav>
+<main>
+<section id="home" class="hero section">
+<div class="ambient ambient-1" data-parallax=".035"></div><div class="ambient ambient-2" data-parallax="-.025"></div><div class="grid-bg"></div>
+<div class="hero-inner">
+<div class="hero-copy reveal">
+<div class="status"><i></i> OPEN TO WORK <span>•</span> JAVA FULL STACK</div>
+<p class="overline mono">01 — HELLO, I'M SAURABH</p>
+<h1>Code that feels<br><em>alive.</em></h1>
+<p class="hero-text">I build secure, scalable web applications with <strong>Java, Spring Boot and React</strong> — turning real-world workflows into clean digital products.</p>
+<div class="hero-buttons"><a class="btn btn-primary" href="#projects">Explore my work <i class="fa-solid fa-arrow-right"></i></a><a class="btn btn-glass" href="#contact">Let's connect <i class="fa-regular fa-paper-plane"></i></a></div>
+<div class="hero-mini"><span><b>5+</b> shipped projects</span><span><b>Java</b> primary stack</span><span><b>2024</b> graduate</span></div>
+</div>
+<div class="hero-art reveal-right" data-parallax=".055">
+<div class="glass-console">
+<div class="console-head"><span><i></i><i></i><i></i></span><b class="mono">BookingService.java</b><small>FIXLY</small></div>
+<div class="console-body"><code><span class="c-comment">// build useful things</span><br><span class="c-purple">@Service</span><br><span class="c-blue">public class</span> <span class="c-green">BookingService</span> {<br><br>&nbsp;&nbsp;<span class="c-blue">public</span> BookingResponse <span class="c-yellow">createBooking</span>(...) {<br>&nbsp;&nbsp;&nbsp;&nbsp;bookingRepo.<span class="c-yellow">save</span>(booking);<br>&nbsp;&nbsp;&nbsp;&nbsp;otpService.<span class="c-yellow">verify</span>(booking);<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-blue">return</span> mapper.toResponse(booking);<br>&nbsp;&nbsp;}<br>}</code></div>
+<div class="console-foot"><span><i></i> SYSTEM ONLINE</span><b>JWT · RBAC · OTP</b></div>
+</div>
+<div class="float-card card-one"><span>01</span><b>REST APIs</b><small>Spring Boot</small></div><div class="float-card card-two"><span>02</span><b>UI / UX</b><small>React JS</small></div>
+<div class="hero-orbit"><i></i><i></i><i></i></div>
+</div>
+</div><a class="hero-scroll" href="#about"><span class="mono">SCROLL</span><i class="fa-solid fa-arrow-down"></i></a>
+</section>
+<section class="ticker" aria-hidden="true"><div><span>JAVA</span><b>✦</b><span>SPRING BOOT</span><b>✦</b><span>SPRING SECURITY</span><b>✦</b><span>REACT</span><b>✦</b><span>MYSQL</span><b>✦</b><span>HIBERNATE</span><b>✦</b><span>REST APIs</span><b>✦</b><span>JWT</span><b>✦</b><span>JAVA</span><b>✦</b><span>SPRING BOOT</span><b>✦</b><span>REACT</span><b>✦</b><span>MYSQL</span><b>✦</b></div></section>
+<section id="about" class="section about"><div class="section-label reveal">02 — ABOUT</div><div class="about-grid">
+<div class="about-visual reveal-left"><div class="photo-glass"><img src="IMG_0409.JPG" alt="Saurabh Kumar" loading="lazy"><div class="photo-overlay"></div><div class="photo-caption"><span class="mono">SAURABH KUMAR</span><b>JAVA / FULL STACK</b></div></div><div class="experience-stamp"><strong>01</strong><span>YEAR<br>OF EXPERIENCE</span></div></div>
+<div class="about-copy reveal"><p class="eyebrow">THE PERSON BEHIND THE CODE</p><h2>Backend mindset.<br><span>Product perspective.</span></h2><p>I'm a Java Full Stack Developer focused on building applications that are secure, maintainable and useful. I enjoy the part where business requirements become APIs, data models and interfaces that actually work together.</p><p>My core work spans Java, Spring Boot, Spring Security, REST APIs, Hibernate, MySQL and React. I care about clean architecture, correct data flow and thoughtful user experiences.</p><div class="about-facts"><div><i class="fa-solid fa-location-dot"></i><span>India<br><small>Open to relocate</small></span></div><div><i class="fa-solid fa-graduation-cap"></i><span>B.Tech CSE<br><small>Chandigarh University</small></span></div><div><i class="fa-solid fa-code"></i><span>Backend first<br><small>Full-stack capable</small></span></div></div></div>
+</div></section>
+<section id="experience" class="section experience"><div class="section-label reveal">03 — EXPERIENCE</div><div class="experience-head reveal"><div><p class="eyebrow">THE JOURNEY</p><h2>Learning by <span>building.</span></h2></div><p>From structured training to real application development, every project has added another layer to how I think about software.</p></div>
+<div class="timeline"><article class="timeline-item reveal"><div class="timeline-dot"><i></i></div><div class="timeline-date mono">2025 — PRESENT</div><div class="timeline-card glass"><span class="tag">PROFESSIONAL</span><h3>Java Developer</h3><h4>24hr7 Commerce Private Limited</h4><p>Working on enterprise applications including tax and compliance workflows. Responsibilities include tracing data flow, finding bugs and developing REST APIs.</p><div class="chips"><span>Java</span><span>REST APIs</span><span>Debugging</span><span>Spring</span></div></div></article>
+<article class="timeline-item reveal"><div class="timeline-dot"><i></i></div><div class="timeline-date mono">2023 — 2024</div><div class="timeline-card glass"><span class="tag">TRAINING</span><h3>Java Full Stack Development</h3><h4>Infosys Springboard</h4><p>Structured learning across Java, OOP, Spring Boot, Hibernate, Spring Security, REST APIs, React and MySQL, supported by hands-on application development.</p><div class="chips"><span>Core Java</span><span>Spring Boot</span><span>Hibernate</span><span>React</span></div></div></article>
+<article class="timeline-item reveal"><div class="timeline-dot"><i></i></div><div class="timeline-date mono">2020 — 2024</div><div class="timeline-card glass"><span class="tag">EDUCATION</span><h3>B.Tech — Computer Science & Engineering</h3><h4>Chandigarh University</h4><p>Built a foundation in software engineering, programming, databases and web development while developing practical full-stack projects.</p><div class="chips"><span>CGPA 7.66</span><span>CSE</span><span>2024 Graduate</span></div></div></article></div></section>
+<section id="stack" class="section stack"><div class="section-label reveal">04 — STACK</div><div class="stack-head reveal"><div><p class="eyebrow">TOOLS I BUILD WITH</p><h2>A toolkit built<br>around <span>Java.</span></h2></div><p>I prefer a focused stack that lets me go deep instead of listing every technology I've touched.</p></div>
+<div class="bento"><article class="bento-card bento-main glass reveal"><div class="bento-icon java"><i class="devicon-java-plain"></i></div><span class="bento-no mono">01</span><h3>Java & Spring</h3><p>Core Java, OOP, Collections, Streams, Spring Boot, Spring MVC, Spring Security and REST architecture.</p><div class="tech-pills"><span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>Spring MVC</span></div></article>
+<article class="bento-card glass reveal"><span class="bento-no mono">02</span><div class="bento-icon db"><i class="devicon-mysql-plain"></i></div><h3>Data</h3><p>Relational models and persistence.</p><div class="mini-stack"><span>MySQL</span><span>Hibernate</span><span>JPA</span></div></article>
+<article class="bento-card glass reveal"><span class="bento-no mono">03</span><div class="bento-icon react"><i class="devicon-react-original"></i></div><h3>Frontend</h3><p>Responsive interfaces and SPAs.</p><div class="mini-stack"><span>React</span><span>JavaScript</span><span>HTML/CSS</span></div></article>
+<article class="bento-card glass reveal"><span class="bento-no mono">04</span><div class="bento-icon tools"><i class="fa-solid fa-screwdriver-wrench"></i></div><h3>Developer Tools</h3><p>Build, test and ship with confidence.</p><div class="mini-stack"><span>Git</span><span>GitHub</span><span>Postman</span><span>IntelliJ</span></div></article>
+<article class="bento-card glass bento-security reveal"><span class="bento-no mono">05</span><div class="security-graphic"><i class="fa-solid fa-shield-halved"></i></div><div><h3>Security-minded</h3><p>JWT authentication · RBAC · API authorization</p></div></article></div></section>
+<section id="projects" class="section projects"><div class="section-label reveal">05 — SELECTED WORK</div><div class="projects-head reveal"><div><p class="eyebrow">PROJECTS</p><h2>Things I've <span>built.</span></h2></div><p>Swipe through the work. Each project solves a different kind of problem.</p></div>
+<div class="project-grid">
+<article class="project-card project-feature glass reveal"><div class="project-visual"><img src="Image/fixly.png" alt="Fixly service marketplace" loading="lazy"><div class="project-glow"></div><span class="project-status"><i></i> LIVE</span><span class="project-index mono">01</span></div><div class="project-content"><div class="project-top"><span>FULL STACK / FLAGSHIP</span><div class="project-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div></div><h3>Fixly</h3><p>Service marketplace connecting customers with local professionals, with multi-role access, JWT authentication and OTP-verified booking workflows.</p><div class="project-tech"><span>Spring Boot</span><span>Spring Security</span><span>JWT</span><span>RBAC</span><span>React</span><span>MySQL</span></div><a href="https://fixlyoffical.netlify.app/" target="_blank" rel="noreferrer" class="project-link">View live project <i class="fa-solid fa-arrow-right"></i></a></div></article>
+<article class="project-card glass reveal"><div class="project-visual"><img src="Image/careandcure.png" alt="Care and Cure hospital management" loading="lazy"><span class="project-index mono">02</span></div><div class="project-content"><div class="project-top"><span>HEALTHCARE</span><div class="project-arrow"><i class="fa-brands fa-github"></i></div></div><h3>Care & Cure</h3><p>Hospital management platform for appointments, patient records, test reports, online consultation and digital prescriptions.</p><div class="project-tech"><span>Spring Boot</span><span>Thymeleaf</span><span>Hibernate</span><span>MySQL</span></div><a href="https://github.com/Saurabhh0000/CareAndCureHospitalManagementApp" target="_blank" rel="noreferrer" class="project-link">View on GitHub <i class="fa-solid fa-arrow-right"></i></a></div></article>
+<article class="project-card glass reveal"><div class="project-visual"><img src="Image/EMS.png" alt="Employee Management System" loading="lazy"><span class="project-index mono">03</span></div><div class="project-content"><div class="project-top"><span>ENTERPRISE</span><div class="project-arrow"><i class="fa-brands fa-github"></i></div></div><h3>Employee Management</h3><p>Full-stack dashboard for employee CRUD, departments, projects and role-based access with a React frontend.</p><div class="project-tech"><span>Spring Boot</span><span>React</span><span>JWT</span><span>MySQL</span></div><a href="https://github.com/Saurabhh0000" target="_blank" rel="noreferrer" class="project-link">View on GitHub <i class="fa-solid fa-arrow-right"></i></a></div></article>
+<article class="project-card glass reveal"><div class="project-visual"><img src="Image/PGLife.jpg" alt="PG Life" loading="lazy"><span class="project-index mono">04</span></div><div class="project-content"><div class="project-top"><span>WEB APP</span><div class="project-arrow"><i class="fa-brands fa-github"></i></div></div><h3>PG Life</h3><p>Location-based student housing platform with city search, property listings, reviews and booking workflows.</p><div class="project-tech"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>CSS</span></div><a href="https://github.com/Saurabhh0000" target="_blank" rel="noreferrer" class="project-link">View on GitHub <i class="fa-solid fa-arrow-right"></i></a></div></article>
+<article class="project-card glass reveal"><div class="project-visual"><img src="Image/TodoApp.png" alt="Todo application" loading="lazy"><span class="project-index mono">05</span></div><div class="project-content"><div class="project-top"><span>SPRING MVC</span><div class="project-arrow"><i class="fa-brands fa-github"></i></div></div><h3>Todo App</h3><p>Task management app demonstrating the Spring MVC request lifecycle, Thymeleaf rendering and Hibernate persistence.</p><div class="project-tech"><span>Spring Boot</span><span>Thymeleaf</span><span>Hibernate</span><span>MySQL</span></div><a href="https://github.com/Saurabhh0000" target="_blank" rel="noreferrer" class="project-link">View on GitHub <i class="fa-solid fa-arrow-right"></i></a></div></article>
+</div></section>
+<section id="contact" class="section contact"><div class="contact-card glass reveal"><div class="contact-orb"></div><div class="section-label">06 — CONTACT</div><p class="eyebrow">HAVE A PROJECT IN MIND?</p><h2>Let's build something<br><span>worth shipping.</span></h2><p class="contact-copy">I'm open to full-time opportunities and interesting engineering work. If you're building something ambitious, I'd love to hear about it.</p><div class="contact-actions"><a class="btn btn-primary" href="mailto:saurabhkeshri074@gmail.com">Email me <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a class="btn btn-glass" href="https://www.linkedin.com/in/saurabh-kumar-fronted-developer/" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a><a class="btn btn-glass" href="https://github.com/Saurabhh0000" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a></div><div class="contact-email mono">saurabhkeshri074@gmail.com</div></div></section>
+</main>
+<footer><span class="mono">© 2026 SAURABH KUMAR</span><span>JAVA · SPRING · REACT</span><a href="#home">BACK TO TOP ↑</a></footer>
+<script src="script.js"></script>
+</body></html>
