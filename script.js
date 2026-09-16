@@ -1,156 +1,87 @@
 (() => {
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const touch = window.matchMedia('(hover: none)').matches;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
+  const $ = (s, root = document) => [...root.querySelectorAll(s)];
   const loader = document.getElementById('loader');
-  const root = document.documentElement;
-
-  window.addEventListener('load', () => {
-    setTimeout(() => loader?.classList.add('hide'), reduce ? 100 : 850);
-  }, { once: true });
+  addEventListener('load', () => setTimeout(() => loader?.classList.add('hide'), reduce ? 80 : 900), {once:true});
 
   const nav = document.getElementById('nav');
   const progress = document.querySelector('.page-progress i');
-  const sections = [...document.querySelectorAll('main section[id]')];
-  const navAnchors = [...document.querySelectorAll('.nav-links a')];
-
-  const updateScroll = () => {
-    const y = window.scrollY;
+  const anchors = $('.nav-links a');
+  const sections = $('main section[id]');
+  const update = () => {
+    const y = scrollY;
     const max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
-    nav?.classList.toggle('scrolled', y > 30);
+    nav?.classList.toggle('scrolled', y > 35);
     if (progress) progress.style.transform = `scaleX(${Math.min(1, y / max)})`;
-
-    let current = '';
-    sections.forEach(section => {
-      if (section.getBoundingClientRect().top <= innerHeight * 0.38) current = section.id;
-    });
-    navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${current}`));
+    let current = 'home';
+    sections.forEach(s => { if (s.getBoundingClientRect().top <= innerHeight * .42) current = s.id; });
+    anchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${current}`));
   };
-  addEventListener('scroll', updateScroll, { passive: true });
-  updateScroll();
+  addEventListener('scroll', update, {passive:true}); update();
 
   const menu = document.querySelector('.menu');
-  const links = document.querySelector('.nav-links');
+  const navLinks = document.querySelector('.nav-links');
   menu?.addEventListener('click', () => {
-    const open = links?.classList.toggle('open');
-    menu.setAttribute('aria-expanded', String(!!open));
+    const open = navLinks.classList.toggle('open');
+    menu.setAttribute('aria-expanded', String(open));
   });
-  links?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    links.classList.remove('open');
-    menu?.setAttribute('aria-expanded', 'false');
+  navLinks?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open'); menu?.setAttribute('aria-expanded','false');
   }));
 
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: .12, rootMargin: '0px 0px -7% 0px' });
-    document.querySelectorAll('.reveal,.reveal-right,.reveal-left').forEach(el => observer.observe(el));
-  } else {
-    document.querySelectorAll('.reveal,.reveal-right,.reveal-left').forEach(el => el.classList.add('visible'));
-  }
+  const revealItems = $('.reveal,.reveal-left,.reveal-right');
+  if ('IntersectionObserver' in window && !reduce) {
+    const observer = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    }), {threshold:.12, rootMargin:'0px 0px -8% 0px'});
+    revealItems.forEach(el => observer.observe(el));
+  } else revealItems.forEach(el => el.classList.add('visible'));
 
-  const glow = document.querySelector('.cursor-glow');
-  if (!touch && !reduce && glow) {
+  if (fine && !reduce) {
+    const glow = document.querySelector('.cursor-glow');
     addEventListener('pointermove', e => {
-      glow.style.left = `${e.clientX}px`;
-      glow.style.top = `${e.clientY}px`;
-      root.style.setProperty('--pointer-x', `${e.clientX}px`);
-      root.style.setProperty('--pointer-y', `${e.clientY}px`);
-    }, { passive: true });
-  }
+      if (glow) { glow.style.left = `${e.clientX}px`; glow.style.top = `${e.clientY}px`; }
+      document.documentElement.style.setProperty('--px', `${e.clientX}px`);
+      document.documentElement.style.setProperty('--py', `${e.clientY}px`);
+    }, {passive:true});
 
-  const parallax = [...document.querySelectorAll('[data-parallax]')];
-  if (!touch && !reduce && parallax.length) {
-    let ticking = false;
-    const paint = () => {
-      ticking = false;
-      const mid = innerHeight / 2;
-      parallax.forEach(el => {
-        const r = el.getBoundingClientRect();
-        const speed = Number(el.dataset.parallax) || .04;
-        const offset = (r.top + r.height / 2 - mid) * speed;
-        el.style.translate = `0 ${offset.toFixed(1)}px`;
-      });
-    };
-    addEventListener('scroll', () => {
-      if (!ticking) { requestAnimationFrame(paint); ticking = true; }
-    }, { passive: true });
-    paint();
-  }
+    // Portrait tilt feels like a physical card rather than a generic hover effect.
+    const portrait = document.querySelector('.portrait');
+    portrait?.addEventListener('pointermove', e => {
+      const r = portrait.getBoundingClientRect();
+      const x = (e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      portrait.style.transform = `rotateX(${(-y*5).toFixed(2)}deg) rotateY(${(x*6).toFixed(2)}deg) rotate(0deg) scale(1.015)`;
+    });
+    portrait?.addEventListener('pointerleave', () => portrait.style.removeProperty('transform'));
 
-  // Soft 3D tilt: the card follows the pointer while preserving its hover lift.
-  if (!touch && !reduce) {
-    document.querySelectorAll('.project-card,.bento-card,.about-facts>div,.timeline-card,.float-card').forEach(card => {
-      card.style.transformStyle = 'preserve-3d';
+    // Project image depth.
+    $('.project-card').forEach(card => {
+      const image = card.querySelector('.project-visual img');
       card.addEventListener('pointermove', e => {
-        const r = card.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width - .5;
-        const y = (e.clientY - r.top) / r.height - .5;
-        card.style.setProperty('--mx', `${(x * 12).toFixed(1)}px`);
-        card.style.setProperty('--my', `${(y * 8).toFixed(1)}px`);
-        card.style.setProperty('--rx', `${(-y * 3.5).toFixed(2)}deg`);
-        card.style.setProperty('--ry', `${(x * 4).toFixed(2)}deg`);
+        const r=card.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+        card.style.setProperty('--rx', `${(-y*2.2).toFixed(2)}deg`); card.style.setProperty('--ry', `${(x*2.6).toFixed(2)}deg`);
+        if(image) image.style.transform=`scale(1.055) translate(${(-x*7).toFixed(1)}px,${(-y*5).toFixed(1)}px)`;
       });
-      card.addEventListener('pointerleave', () => {
-        card.style.removeProperty('--mx');
-        card.style.removeProperty('--my');
-        card.style.removeProperty('--rx');
-        card.style.removeProperty('--ry');
-      });
+      card.addEventListener('pointerleave', () => { card.style.removeProperty('--rx'); card.style.removeProperty('--ry'); if(image) image.style.removeProperty('transform'); });
+    });
+
+    // Small magnetic movement for CTAs.
+    $('.btn,.nav-resume').forEach(el => {
+      el.addEventListener('pointermove', e => { const r=el.getBoundingClientRect(); el.style.translate=`${((e.clientX-r.left-r.width/2)*.07).toFixed(1)}px ${((e.clientY-r.top-r.height/2)*.07).toFixed(1)}px`; });
+      el.addEventListener('pointerleave', () => el.style.removeProperty('translate'));
     });
   }
 
-  // Add the 3D transform through a single injected rule so existing card hover styles stay intact.
-  const motionStyle = document.createElement('style');
-  motionStyle.textContent = `
-    @media (hover:hover) and (pointer:fine) {
-      .project-card,.bento-card,.about-facts>div,.timeline-card,.float-card {
-        transform: perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translate3d(var(--mx,0),var(--my,0),0);
-        will-change: transform;
-      }
-      .project-card:hover,.bento-card:hover,.about-facts>div:hover,.timeline-card:hover,.float-card:hover {
-        transform: perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translate3d(var(--mx,0),var(--my,-7px),0) !important;
-      }
-    }
-    .nav-links a.active { color: var(--text); }
-    .nav-links a.active:after { transform: translateX(-50%) scale(1); }
-    .btn, .nav-resume, .project-link { -webkit-tap-highlight-color: transparent; }
-    .btn i, .nav-resume i { transition: transform .3s cubic-bezier(.2,.75,.2,1); }
-    .btn:hover i, .nav-resume:hover i { transform: translateX(4px) translateY(-1px); }
-    @media (prefers-reduced-motion:reduce) {
-      .project-card,.bento-card,.about-facts>div,.timeline-card,.float-card { transform:none !important; }
-    }
-  `;
-  document.head.appendChild(motionStyle);
-
-  // Magnetic micro-interaction for primary actions.
-  if (!touch && !reduce) {
-    document.querySelectorAll('.btn-primary,.btn-glass,.nav-resume').forEach(button => {
-      button.addEventListener('pointermove', e => {
-        const r = button.getBoundingClientRect();
-        const x = (e.clientX - r.left - r.width / 2) * .08;
-        const y = (e.clientY - r.top - r.height / 2) * .08;
-        button.style.translate = `${x.toFixed(1)}px ${y.toFixed(1)}px`;
-      });
-      button.addEventListener('pointerleave', () => { button.style.removeProperty('translate'); });
-    });
-  }
-
-  // Subtle image depth on project cards.
-  if (!touch && !reduce) {
-    document.querySelectorAll('.project-visual img').forEach(img => {
-      const parent = img.closest('.project-visual');
-      parent?.addEventListener('pointermove', e => {
-        const r = parent.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width - .5;
-        const y = (e.clientY - r.top) / r.height - .5;
-        img.style.translate = `${(x * -10).toFixed(1)}px ${(y * -8).toFixed(1)}px`;
-      });
-      parent?.addEventListener('pointerleave', () => { img.style.removeProperty('translate'); });
-    });
+  // Keep the skills constellation gently alive without moving it on touch screens.
+  if (!reduce) {
+    const constellation = document.querySelector('.constellation');
+    let t = 0;
+    const animate = () => {
+      t += .006;
+      if (constellation && fine) constellation.style.setProperty('--spin', `${Math.sin(t)*2}deg`);
+      requestAnimationFrame(animate);
+    };
+    requestAnimationFrame(animate);
   }
 })();
